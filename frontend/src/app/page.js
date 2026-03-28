@@ -1,5 +1,8 @@
 import Hero from "@/components/Hero"
 import TourSection from "@/components/TourSection"
+import DestinationSection from "@/components/DestinationSection"
+import ReviewSection from "@/components/ReviewSection"
+
 
 export default function Home() {
   return (
@@ -8,6 +11,10 @@ export default function Home() {
       <Hero />
 
       <TourSection />
+      
+      <DestinationSection/>
+
+      <ReviewSection/>
 
     </main>
   )
