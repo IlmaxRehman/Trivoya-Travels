@@ -32,6 +32,22 @@ export default async function TourPage({ params }) {
       <p className="text-orange-600 text-xl font-semibold mt-2">
         {tour.price}
       </p>
+      
+      <div className="mt-8 bg-gray-50 p-6 rounded-lg">
+
+       <h2 className="text-2xl font-semibold mb-4">Tour Highlights</h2>
+
+       <ul className="space-y-2 text-gray-700">
+
+       <li>✔ Private air-conditioned car pickup</li>
+       <li>✔ Professional English speaking guide</li>
+       <li>✔ Sunrise visit to the Taj Mahal</li>
+       <li>✔ Visit Agra Fort UNESCO World Heritage Site</li>
+       <li>✔ Hotel pickup and drop-off included</li>
+
+       </ul>
+
+      </div>
 
       <a
         href={whatsappLink}
