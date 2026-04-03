@@ -1,6 +1,19 @@
-export default function BlogPage() {
-  return (
+"use client"
 
+import { useEffect, useState } from "react"
+import Link from "next/link"
+
+export default function BlogPage() {
+
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/blog/")
+      .then((res) => res.json())
+      .then((data) => setPosts(data))
+  }, [])
+
+  return (
     <div className="max-w-5xl mx-auto py-16 px-6">
 
       <h1 className="text-4xl font-bold mb-10">
@@ -9,29 +22,27 @@ export default function BlogPage() {
 
       <div className="space-y-8">
 
-        <div>
-          <a href="/blog/best-time-to-visit-taj-mahal" className="text-2xl font-semibold text-orange-600">
-            Best Time to Visit Taj Mahal
-          </a>
+        {posts.map((post) => (
 
-          <p className="text-gray-600">
-            Discover the best season and time of day to visit the Taj Mahal.
-          </p>
-        </div>
+          <div key={post.id} className="border-b pb-6">
 
-        <div>
-          <a href="/blog/taj-mahal-sunrise-vs-sunset" className="text-2xl font-semibold text-orange-600">
-            Taj Mahal Sunrise vs Sunset
-          </a>
+            <Link
+              href={`/blog/${post.slug}`}
+              className="text-2xl font-semibold text-orange-600"
+            >
+              {post.title}
+            </Link>
 
-          <p className="text-gray-600">
-            Which time offers the best experience for visiting the Taj Mahal?
-          </p>
-        </div>
+            <p className="text-gray-500 mt-2">
+              {post.content.substring(0,120)}...
+            </p>
+
+          </div>
+
+        ))}
 
       </div>
 
     </div>
-
   )
 }
