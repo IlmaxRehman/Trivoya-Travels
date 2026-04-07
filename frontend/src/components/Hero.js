@@ -1,30 +1,39 @@
+import Image from "next/image"
+
 export default function Hero() {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center text-white">
-      
-      <img
-        src="https://images.unsplash.com/photo-1564507592333-c60657eea523"
-        alt="Taj Mahal"
-        className="absolute inset-0 w-full h-full object-cover"
+    <section className="relative h-[85vh] w-full">
+
+      <Image
+        src="/images/hero/taj.jpg"
+        alt="Taj Mahal Tour in Agra India"
+        fill
+        priority
+        className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
 
-      <div className="relative text-center max-w-2xl px-6">
-        <h1 className="text-5xl font-bold mb-4">
-          Discover India with Trivoya Travels
-        </h1>
+        <div className="text-center text-white max-w-2xl px-6">
 
-        <p className="text-lg mb-6">
-          Private Taj Mahal tours, Golden Triangle journeys and unforgettable experiences across India.
-        </p>
+          <h1 className="text-5xl font-bold mb-6">
+            Taj Mahal & Golden Triangle Tours
+          </h1>
 
-        <a
-          href="/tours"
-          className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium"
-        >
-          Explore Tours
-        </a>
+          <p className="text-lg mb-8">
+            Explore India's most iconic destinations including Agra,
+            Delhi and Jaipur with Trivoya Travels.
+          </p>
+
+          <a
+            href="/tours"
+            className="bg-orange-500 px-8 py-3 rounded-lg text-white font-semibold hover:bg-orange-600 transition"
+          >
+            Explore Tours
+          </a>
+
+        </div>
+
       </div>
 
     </section>
