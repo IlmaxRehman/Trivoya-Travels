@@ -1,29 +1,43 @@
-export default function TourCard({ tour }) {
-  return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+import Image from "next/image"
 
-      <img
-        src={tour.hero_image}
-        alt={tour.name}
-        className="w-full h-48 object-cover"
+export default function TourCard({ image, title, description, price }) {
+  return (
+    <div className="shadow-lg rounded-xl overflow-hidden bg-white">
+
+      <Image
+        src={image}
+        width={400}
+        height={250}
+        alt={title}
       />
 
-      <div className="p-4">
+      <div className="p-5">
 
-        <h3 className="text-lg font-semibold">{tour.name}</h3>
+        <h3 className="font-semibold text-lg mb-2">
+          {title}
+        </h3>
 
-        <p className="text-gray-500">{tour.duration}</p>
+        <p className="text-gray-600 text-sm mb-4">
+          {description}
+        </p>
 
-        <p className="text-orange-600 font-bold mt-2">{tour.price}</p>
+        <div className="flex justify-between items-center">
 
-        <a
-          href={`/tours/${tour.slug}`}
-          className="inline-block mt-3 bg-orange-500 text-white px-4 py-2 rounded"
-        >
-          View Details
-        </a>
+          <span className="text-orange-500 font-bold">
+            ${price}
+          </span>
+
+          <a
+            href="/tours"
+            className="text-orange-500 font-medium"
+          >
+            View Details
+          </a>
+
+        </div>
 
       </div>
+
     </div>
   )
 }

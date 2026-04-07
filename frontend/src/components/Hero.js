@@ -6,13 +6,13 @@ export default function Hero() {
 
       <Image
         src="/images/hero/taj.jpg"
-        alt="Taj Mahal Tour in Agra India"
+        alt="Taj Mahal sunrise tour in Agra India"
         fill
         priority
         className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
 
         <div className="text-center text-white max-w-2xl px-6">
 
@@ -21,8 +21,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg mb-8">
-            Explore India's most iconic destinations including Agra,
-            Delhi and Jaipur with Trivoya Travels.
+            Discover India's most iconic destinations including Agra, Delhi
+            and Jaipur with expert guides and private tours.
           </p>
 
           <a
