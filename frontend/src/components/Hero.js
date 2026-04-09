@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="relative h-[90vh] w-full">
+    <section className="relative h-[90vh] w-full pt-16">
 
       {/* Background Image */}
 
