@@ -22,13 +22,12 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
         {/* Logo */}
-
         <a href="/" className="flex items-center">
 
-          <div className="relative h-16 w-56">
+          <div className="relative h-12 w-44">
 
             <Image
               src="/images/trivoya_logo.png"
@@ -43,9 +42,8 @@ export default function Navbar() {
         </a>
 
         {/* Navigation */}
-
         <ul
-          className={`hidden md:flex gap-10 font-medium text-lg transition ${
+          className={`hidden md:flex gap-8 font-medium text-base transition ${
             scrolled ? "text-gray-800" : "text-white"
           }`}
         >
