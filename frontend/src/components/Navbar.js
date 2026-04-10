@@ -33,7 +33,7 @@ export default function Navbar() {
             <div className="relative h-12 w-44">
 
               <Image
-                src="/images/trivoya_logo.png"
+                src="/images/logo.png"
                 alt="Trivoya Travels Logo"
                 fill
                 sizes="200px"

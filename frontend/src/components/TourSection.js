@@ -1,58 +1,66 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import TourCard from "./TourCard"
+import Image from "next/image"
 
 export default function TourSection() {
 
-  const [tours, setTours] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-
-    fetch(process.env.NEXT_PUBLIC_API_URL + "/api/tours/")
-      .then((res) => res.json())
-      .then((data) => {
-        setTours(data)
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
-
-  }, [])
+  const categories = [
+    {
+      name: "Agra Tours",
+      image: "/images/destinations/agra.jpg",
+      link: "/tours/agra"
+    },
+    {
+      name: "Delhi Tours",
+      image: "/images/destinations/delhi.jpg",
+      link: "/tours/delhi"
+    },
+    {
+      name: "Jaipur Tours",
+      image: "/images/destinations/jaipur.jpg",
+      link: "/tours/jaipur"
+    }
+  ]
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-24 bg-gray-50">
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
 
-        {/* Section Title */}
-
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Taj Mahal & Golden Triangle Tour Packages
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Explore Our Tour Packages
         </h2>
 
-        {/* SEO text */}
+        <div className="grid md:grid-cols-3 gap-8">
 
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          Discover our most popular India tour packages including Taj Mahal
-          sunrise tours, Golden Triangle itineraries, private Agra day trips
-          and luxury heritage experiences.
-        </p>
+          {categories.map((cat, index) => (
 
-        {/* Loading */}
+            <a
+              key={index}
+              href={cat.link}
+              className="group relative overflow-hidden rounded-xl shadow-lg"
+            >
 
-        {loading && (
-          <p className="text-center text-gray-500">
-            Loading tours...
-          </p>
-        )}
+              <div className="relative h-80 w-full">
 
-        {/* Tours Grid */}
+                <Image
+                  src={cat.image}
+                  alt={cat.name}
+                  fill
+                  sizes="(max-width:768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition duration-300"
+                />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              </div>
 
-          {tours.map((tour) => (
-            <TourCard key={tour.id} tour={tour} />
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+
+                <h3 className="text-white text-2xl font-semibold">
+                  {cat.name}
+                </h3>
+
+              </div>
+
+            </a>
+
           ))}
 
         </div>
