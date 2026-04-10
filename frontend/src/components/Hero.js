@@ -36,8 +36,10 @@ export default function Hero() {
           alt="Golden Triangle tour India"
           fill
           priority={i === 0}
-          className={`object-cover transition-opacity duration-1000 ${
-            i === index ? "opacity-100" : "opacity-0"
+          className={`object-cover transition-all duration-[7000ms] ${
+          i === index
+            ? "opacity-100 scale-110"
+            : "opacity-0 scale-100"
           }`}
         />
       ))}
