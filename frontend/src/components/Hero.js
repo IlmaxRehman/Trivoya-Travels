@@ -36,13 +36,16 @@ export default function Hero() {
           alt="Golden Triangle tour India"
           fill
           priority={i === 0}
-          className={`object-cover transition-all duration-[7000ms] ${
+          className={`object-cover transition-all duration-7000 ${
           i === index
             ? "opacity-100 scale-110"
             : "opacity-0 scale-100"
           }`}
         />
       ))}
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-linear-to-t from-white to-transparent"></div>
 
       {/* Dark overlay */}
 
