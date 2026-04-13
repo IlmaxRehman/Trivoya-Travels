@@ -12,7 +12,7 @@ export default function TourCard({ tour }) {
       <div className="relative h-60 w-full">
 
         <Image
-          src={tour.image || "/images/placeholder.jpg"}
+          src={tour.hero_image || "/images/placeholder.jpg"}
           alt={(tour.title || "Tour package") + " Taj Mahal tour"}
           fill
           className="object-cover"

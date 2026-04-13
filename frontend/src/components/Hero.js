@@ -44,9 +44,7 @@ export default function Hero() {
         />
       ))}
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-linear-to-t from-white to-transparent"></div>
-
+      
       {/* Dark overlay */}
 
       <div className="absolute inset-0 bg-black/50 flex items-center justify-center">

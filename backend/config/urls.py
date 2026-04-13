@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from tours.views import TourListView, TourDetailView
 from tours.views import BlogListView, BlogDetailView
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +30,5 @@ urlpatterns = [
     path('api/blog/', BlogListView.as_view()),
     path('api/blog/<slug:slug>/', BlogDetailView.as_view()),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

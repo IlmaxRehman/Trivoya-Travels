@@ -4,6 +4,8 @@ from .models import BlogPost
 
 
 class TourSerializer(serializers.ModelSerializer):
+
+    hero_image = serializers.ImageField(use_url=True)
     class Meta:
         model = Tour
         fields = '__all__'
