@@ -8,8 +8,7 @@ async function getTour(slug) {
 
 export default async function TourPage({ params }) {
 
-  const { slug } = await params   // ✅ FIXED (IMPORTANT)
-
+  const { slug } = await params
   const tour = await getTour(slug)
 
   const message = `Hi, I'm interested in the ${tour.name}`
@@ -17,51 +16,106 @@ export default async function TourPage({ params }) {
     `https://wa.me/917409970085?text=${encodeURIComponent(message)}`
 
   return (
-    <div className="bg-gray-50">
+    <div>
 
-      <section className="relative h-[70vh] w-full">
+      {/* 🔥 HERO */}
+
+      <div className="relative h-[60vh] w-full">
+
         <img
-          src={tour.hero_image}
+          src="/images/tours/taj-tour.jpg"
           alt={tour.name}
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <div className="text-center text-white px-6">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {tour.name}
-            </h1>
-            <p className="text-lg">
-              {tour.duration} • From ${tour.price}
-            </p>
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+
+          <h1 className="text-white text-4xl md:text-5xl font-bold text-center px-6">
+            {tour.name}
+          </h1>
+
+        </div>
+
+      </div>
+
+      {/* 🔥 CONTENT */}
+
+      <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+
+        {/* LEFT SIDE */}
+
+        <div className="md:col-span-2">
+
+          {/* Overview */}
+
+          <h2 className="text-2xl font-semibold mb-4">
+            Tour Overview
+          </h2>
+
+          <p className="text-gray-700 mb-6">
+            {tour.description}
+          </p>
+
+          {/* Highlights */}
+
+          <div className="bg-gray-50 p-6 rounded-xl mb-8">
+
+            <h3 className="text-xl font-semibold mb-4">
+              Tour Highlights
+            </h3>
+
+            <ul className="space-y-2 text-gray-700">
+              <li>✔ Private air-conditioned car</li>
+              <li>✔ Professional tour guide</li>
+              <li>✔ Hotel pickup & drop</li>
+              <li>✔ Comfortable travel experience</li>
+            </ul>
+
           </div>
-        </div>
-      </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-16">
+          {/* Itinerary */}
 
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Tour Overview</h2>
-          <p className="text-gray-700">{tour.description}</p>
-        </div>
+          <h2 className="text-2xl font-semibold mb-4">
+            Itinerary
+          </h2>
 
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Itinerary</h2>
           <p className="text-gray-700 whitespace-pre-line">
             {tour.itinerary}
           </p>
+
         </div>
 
-        <div className="bg-orange-50 p-6 rounded-xl text-center">
+        {/* RIGHT SIDE (BOOKING BOX) */}
+
+        <div className="bg-white border rounded-xl shadow-md p-6 h-fit sticky top-24">
+
+          <h3 className="text-xl font-semibold mb-4">
+            Book This Tour
+          </h3>
+
+          <p className="text-gray-500 mb-2">
+            Duration: {tour.duration}
+          </p>
+
+          <p className="text-2xl text-orange-500 font-bold mb-6">
+            {tour.price}
+          </p>
+
           <a
             href={whatsappLink}
-            className="bg-orange-500 text-white px-6 py-3 rounded-lg"
+            target="_blank"
+            className="block text-center bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition"
           >
             Book on WhatsApp
           </a>
+
+          <p className="text-xs text-gray-400 mt-4 text-center">
+            Instant confirmation via WhatsApp
+          </p>
+
         </div>
 
-      </section>
+      </div>
 
     </div>
   )
