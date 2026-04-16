@@ -2,41 +2,68 @@
 
 import { useEffect, useState } from "react"
 import TourCard from "@/components/TourCard"
+import Image from "next/image"
 
-export default function DelhiTours() {
+export default function AgraTours() {
 
   const [tours, setTours] = useState([])
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tours/?city=delhi`)
+    fetch(`http://127.0.0.1:8000/api/tours/?city=agra`)
       .then(res => res.json())
       .then(data => setTours(data))
   }, [])
 
   return (
-    <section className="py-24 bg-gray-50">
+    <div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      {/* 🔥 HERO SECTION */}
 
-        <h1 className="text-4xl font-bold text-center mb-4">
-          Delhi Tour Packages
-        </h1>
+      <section className="relative h-[50vh] w-full">
 
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          Explore the capital of India with our Delhi tour packages.
-          Discover historic landmarks, vibrant markets and cultural experiences.
-        </p>
+        <Image
+          src="/images/destinations/jaipur.jpg"
+          alt="Jaipur Tours"
+          fill
+          className="object-cover"
+        />
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
 
-          {tours.map(tour => (
-            <TourCard key={tour.id} tour={tour} />
-          ))}
+          <div className="text-center text-white px-6">
+
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Jaipur Tour Packages
+            </h1>
+
+            <p className="max-w-2xl text-lg text-gray-200">
+              Explore the Pink City, Hawa Mahal and experience Rajasthani culture with expert guides.
+            </p>
+
+          </div>
 
         </div>
 
-      </div>
+      </section>
 
-    </section>
+      {/* 🔥 TOURS */}
+
+      <section className="py-20 bg-gray-50">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            {tours.map(tour => (
+              <TourCard key={tour.id} tour={tour} />
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
   )
 }
