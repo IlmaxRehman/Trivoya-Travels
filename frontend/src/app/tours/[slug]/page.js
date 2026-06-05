@@ -12,13 +12,14 @@ export default async function TourPage({ params }) {
   const tour = await getTour(slug)
 
   const message = `Hi, I'm interested in the ${tour.name}`
+
   const whatsappLink =
     `https://wa.me/917409970085?text=${encodeURIComponent(message)}`
 
   return (
     <div className="bg-gray-50">
 
-      {/* HERO SECTION */}
+      {/* HERO */}
 
       <section className="relative h-[60vh] w-full">
 
@@ -28,7 +29,7 @@ export default async function TourPage({ params }) {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
 
           <div className="text-center text-white px-6 max-w-4xl">
 
@@ -37,7 +38,7 @@ export default async function TourPage({ params }) {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200 mb-8">
-              {tour.duration} • From ${tour.price}
+              {tour.duration} • From {tour.price}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -51,7 +52,7 @@ export default async function TourPage({ params }) {
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl">
-                👨 Guide Included
+                👨 Professional Guide
               </div>
 
             </div>
@@ -62,17 +63,17 @@ export default async function TourPage({ params }) {
 
       </section>
 
-      {/* MAIN CONTENT */}
+      {/* CONTENT */}
 
       <section className="max-w-6xl mx-auto px-6 py-16">
 
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-3 gap-12">
 
-          {/* LEFT COLUMN */}
+          {/* LEFT SIDE */}
 
           <div className="lg:col-span-2">
 
-            {/* TOUR OVERVIEW */}
+            {/* OVERVIEW */}
 
             <div className="mb-16">
 
@@ -80,13 +81,13 @@ export default async function TourPage({ params }) {
                 Tour Overview
               </h2>
 
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-gray-700 text-lg leading-relaxed">
                 {tour.description}
               </p>
 
             </div>
 
-            {/* TOUR HIGHLIGHTS */}
+            {/* HIGHLIGHTS */}
 
             <div className="mb-16">
 
@@ -96,20 +97,20 @@ export default async function TourPage({ params }) {
 
               <div className="grid md:grid-cols-2 gap-4">
 
-                <div className="bg-white border rounded-xl p-5 shadow-sm">
+                <div className="bg-white p-5 rounded-xl border shadow-sm">
                   ✓ Taj Mahal Visit
                 </div>
 
-                <div className="bg-white border rounded-xl p-5 shadow-sm">
+                <div className="bg-white p-5 rounded-xl border shadow-sm">
                   ✓ Professional Guide
                 </div>
 
-                <div className="bg-white border rounded-xl p-5 shadow-sm">
-                  ✓ AC Transport
+                <div className="bg-white p-5 rounded-xl border shadow-sm">
+                  ✓ Hotel Pickup
                 </div>
 
-                <div className="bg-white border rounded-xl p-5 shadow-sm">
-                  ✓ Hotel Pickup
+                <div className="bg-white p-5 rounded-xl border shadow-sm">
+                  ✓ AC Transport
                 </div>
 
               </div>
@@ -120,62 +121,54 @@ export default async function TourPage({ params }) {
 
             <div className="mb-16">
 
-              <h2 className="text-3xl font-bold mb-8">
+              <h2 className="text-3xl font-bold mb-10">
                 Itinerary
               </h2>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
 
-                {tour.itinerary
-                  ?.split("→")
-                  .map((step, index) => (
+                {tour.itinerary?.split("→").map((step, index) => (
 
-                    <div
-                      key={index}
-                      className="flex items-start gap-4"
-                    >
+                  <div
+                    key={index}
+                    className="flex gap-5 items-start"
+                  >
 
-                      <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold shrink-0">
-                        {index + 1}
+                    <div className="flex flex-col items-center">
+
+                      <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">
+                        {String(index + 1).padStart(2, "0")}
                       </div>
 
-                      <div className="bg-white border rounded-xl p-4 shadow-sm flex-1">
-                        {step.trim()}
-                      </div>
+                      {index !== tour.itinerary.split("→").length - 1 && (
+                        <div className="w-[2px] h-14 bg-orange-200 mt-2"></div>
+                      )}
 
                     </div>
 
-                  ))}
+                    <div>
+
+                      <h3 className="font-semibold text-lg text-gray-900">
+                        {step.trim()}
+                      </h3>
+
+                      <p className="text-sm text-gray-500 mt-1">
+                        Tour activity
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                ))}
 
               </div>
 
             </div>
 
-            {/* FINAL CTA */}
-
-            <div className="bg-orange-50 border border-orange-100 rounded-2xl p-8 text-center">
-
-              <h3 className="text-2xl font-bold mb-3">
-                Ready to Explore India?
-              </h3>
-
-              <p className="text-gray-600 mb-6">
-                Contact us directly on WhatsApp for instant assistance and booking.
-              </p>
-
-              <a
-                href={whatsappLink}
-                target="_blank"
-                className="inline-block bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition"
-              >
-                Book on WhatsApp
-              </a>
-
-            </div>
-
           </div>
 
-          {/* RIGHT SIDEBAR */}
+          {/* SIDEBAR */}
 
           <div>
 
@@ -188,7 +181,7 @@ export default async function TourPage({ params }) {
                 </p>
 
                 <h3 className="text-4xl font-bold mt-2">
-                  ${tour.price}
+                  {tour.price}
                 </h3>
 
               </div>
@@ -196,35 +189,50 @@ export default async function TourPage({ params }) {
               <div className="p-6 space-y-5">
 
                 <div className="flex justify-between border-b pb-3">
-                  <span className="text-gray-600">Duration</span>
+                  <span className="text-gray-600">
+                    Duration
+                  </span>
+
                   <span className="font-semibold">
                     {tour.duration}
                   </span>
                 </div>
 
                 <div className="flex justify-between border-b pb-3">
-                  <span className="text-gray-600">Location</span>
-                  <span className="font-semibold">
+                  <span className="text-gray-600">
+                    Location
+                  </span>
+
+                  <span className="font-semibold capitalize">
                     {tour.city || "India"}
                   </span>
                 </div>
 
                 <div className="flex justify-between border-b pb-3">
-                  <span className="text-gray-600">Guide</span>
+                  <span className="text-gray-600">
+                    Guide
+                  </span>
+
                   <span className="font-semibold">
                     Included
                   </span>
                 </div>
 
                 <div className="flex justify-between border-b pb-3">
-                  <span className="text-gray-600">Transport</span>
+                  <span className="text-gray-600">
+                    Transport
+                  </span>
+
                   <span className="font-semibold">
                     AC Vehicle
                   </span>
                 </div>
 
                 <div className="flex justify-between border-b pb-3">
-                  <span className="text-gray-600">Pickup</span>
+                  <span className="text-gray-600">
+                    Pickup
+                  </span>
+
                   <span className="font-semibold">
                     Included
                   </span>
@@ -233,6 +241,7 @@ export default async function TourPage({ params }) {
                 <a
                   href={whatsappLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-center bg-green-500 text-white py-4 rounded-xl font-semibold hover:bg-green-600 transition"
                 >
                   Book on WhatsApp
