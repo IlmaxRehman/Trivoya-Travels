@@ -7,8 +7,8 @@ async function getTour(slug) {
 }
 
 export default async function TourPage({ params }) {
-
   const { slug } = await params
+
   const tour = await getTour(slug)
 
   const message = `Hi, I'm interested in the ${tour.name}`
@@ -16,106 +16,237 @@ export default async function TourPage({ params }) {
     `https://wa.me/917409970085?text=${encodeURIComponent(message)}`
 
   return (
-    <div>
+    <div className="bg-gray-50">
 
-      {/* 🔥 HERO */}
+      {/* HERO SECTION */}
 
-      <div className="relative h-[60vh] w-full">
+      <section className="relative h-[60vh] w-full">
 
         <img
-          src="/images/tours/taj-tour.jpg"
+          src={tour.hero_image}
           alt={tour.name}
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
 
-          <h1 className="text-white text-4xl md:text-5xl font-bold text-center px-6">
-            {tour.name}
-          </h1>
+          <div className="text-center text-white px-6 max-w-4xl">
 
-        </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              {tour.name}
+            </h1>
 
-      </div>
+            <p className="text-lg md:text-xl text-gray-200 mb-8">
+              {tour.duration} • From ${tour.price}
+            </p>
 
-      {/* 🔥 CONTENT */}
+            <div className="flex flex-wrap justify-center gap-4">
 
-      <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+              <div className="bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl">
+                📍 {tour.city || "India"}
+              </div>
 
-        {/* LEFT SIDE */}
+              <div className="bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl">
+                🕒 {tour.duration}
+              </div>
 
-        <div className="md:col-span-2">
+              <div className="bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl">
+                👨 Guide Included
+              </div>
 
-          {/* Overview */}
-
-          <h2 className="text-2xl font-semibold mb-4">
-            Tour Overview
-          </h2>
-
-          <p className="text-gray-700 mb-6">
-            {tour.description}
-          </p>
-
-          {/* Highlights */}
-
-          <div className="bg-gray-50 p-6 rounded-xl mb-8">
-
-            <h3 className="text-xl font-semibold mb-4">
-              Tour Highlights
-            </h3>
-
-            <ul className="space-y-2 text-gray-700">
-              <li>✔ Private air-conditioned car</li>
-              <li>✔ Professional tour guide</li>
-              <li>✔ Hotel pickup & drop</li>
-              <li>✔ Comfortable travel experience</li>
-            </ul>
+            </div>
 
           </div>
 
-          {/* Itinerary */}
+        </div>
 
-          <h2 className="text-2xl font-semibold mb-4">
-            Itinerary
-          </h2>
+      </section>
 
-          <p className="text-gray-700 whitespace-pre-line">
-            {tour.itinerary}
-          </p>
+      {/* MAIN CONTENT */}
+
+      <section className="max-w-6xl mx-auto px-6 py-16">
+
+        <div className="grid lg:grid-cols-3 gap-10">
+
+          {/* LEFT COLUMN */}
+
+          <div className="lg:col-span-2">
+
+            {/* TOUR OVERVIEW */}
+
+            <div className="mb-16">
+
+              <h2 className="text-3xl font-bold mb-6">
+                Tour Overview
+              </h2>
+
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {tour.description}
+              </p>
+
+            </div>
+
+            {/* TOUR HIGHLIGHTS */}
+
+            <div className="mb-16">
+
+              <h2 className="text-3xl font-bold mb-6">
+                Tour Highlights
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-4">
+
+                <div className="bg-white border rounded-xl p-5 shadow-sm">
+                  ✓ Taj Mahal Visit
+                </div>
+
+                <div className="bg-white border rounded-xl p-5 shadow-sm">
+                  ✓ Professional Guide
+                </div>
+
+                <div className="bg-white border rounded-xl p-5 shadow-sm">
+                  ✓ AC Transport
+                </div>
+
+                <div className="bg-white border rounded-xl p-5 shadow-sm">
+                  ✓ Hotel Pickup
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* ITINERARY */}
+
+            <div className="mb-16">
+
+              <h2 className="text-3xl font-bold mb-8">
+                Itinerary
+              </h2>
+
+              <div className="space-y-6">
+
+                {tour.itinerary
+                  ?.split("→")
+                  .map((step, index) => (
+
+                    <div
+                      key={index}
+                      className="flex items-start gap-4"
+                    >
+
+                      <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold shrink-0">
+                        {index + 1}
+                      </div>
+
+                      <div className="bg-white border rounded-xl p-4 shadow-sm flex-1">
+                        {step.trim()}
+                      </div>
+
+                    </div>
+
+                  ))}
+
+              </div>
+
+            </div>
+
+            {/* FINAL CTA */}
+
+            <div className="bg-orange-50 border border-orange-100 rounded-2xl p-8 text-center">
+
+              <h3 className="text-2xl font-bold mb-3">
+                Ready to Explore India?
+              </h3>
+
+              <p className="text-gray-600 mb-6">
+                Contact us directly on WhatsApp for instant assistance and booking.
+              </p>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                className="inline-block bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition"
+              >
+                Book on WhatsApp
+              </a>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT SIDEBAR */}
+
+          <div>
+
+            <div className="sticky top-24 bg-white rounded-2xl shadow-lg border overflow-hidden">
+
+              <div className="bg-orange-500 text-white p-6">
+
+                <p className="uppercase tracking-widest text-sm">
+                  Starting From
+                </p>
+
+                <h3 className="text-4xl font-bold mt-2">
+                  ${tour.price}
+                </h3>
+
+              </div>
+
+              <div className="p-6 space-y-5">
+
+                <div className="flex justify-between border-b pb-3">
+                  <span className="text-gray-600">Duration</span>
+                  <span className="font-semibold">
+                    {tour.duration}
+                  </span>
+                </div>
+
+                <div className="flex justify-between border-b pb-3">
+                  <span className="text-gray-600">Location</span>
+                  <span className="font-semibold">
+                    {tour.city || "India"}
+                  </span>
+                </div>
+
+                <div className="flex justify-between border-b pb-3">
+                  <span className="text-gray-600">Guide</span>
+                  <span className="font-semibold">
+                    Included
+                  </span>
+                </div>
+
+                <div className="flex justify-between border-b pb-3">
+                  <span className="text-gray-600">Transport</span>
+                  <span className="font-semibold">
+                    AC Vehicle
+                  </span>
+                </div>
+
+                <div className="flex justify-between border-b pb-3">
+                  <span className="text-gray-600">Pickup</span>
+                  <span className="font-semibold">
+                    Included
+                  </span>
+                </div>
+
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  className="block text-center bg-green-500 text-white py-4 rounded-xl font-semibold hover:bg-green-600 transition"
+                >
+                  Book on WhatsApp
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
-        {/* RIGHT SIDE (BOOKING BOX) */}
-
-        <div className="bg-white border rounded-xl shadow-md p-6 h-fit sticky top-24">
-
-          <h3 className="text-xl font-semibold mb-4">
-            Book This Tour
-          </h3>
-
-          <p className="text-gray-500 mb-2">
-            Duration: {tour.duration}
-          </p>
-
-          <p className="text-2xl text-orange-500 font-bold mb-6">
-            {tour.price}
-          </p>
-
-          <a
-            href={whatsappLink}
-            target="_blank"
-            className="block text-center bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition"
-          >
-            Book on WhatsApp
-          </a>
-
-          <p className="text-xs text-gray-400 mt-4 text-center">
-            Instant confirmation via WhatsApp
-          </p>
-
-        </div>
-
-      </div>
+      </section>
 
     </div>
   )

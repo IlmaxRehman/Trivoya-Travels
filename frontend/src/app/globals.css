@@ -1,91 +1,125 @@
 @import "tailwindcss";
 
-/* 🔥 BRAND COLORS */
+/* =========================
+   BRAND COLORS
+========================= */
 
 :root {
   --background: #ffffff;
   --foreground: #111827;
 
-  /* Primary (your orange theme) */
+  /* Primary Brand Color */
   --primary: #f97316;
   --primary-dark: #ea580c;
 
-  /* Neutral */
+  /* Neutral Colors */
   --muted: #6b7280;
   --light-bg: #f9fafb;
 }
 
-/* 🔥 TYPOGRAPHY */
+/* =========================
+   GLOBAL BODY
+========================= */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
 
   line-height: 1.6;
   letter-spacing: 0.2px;
 
-  /* Smooth feel */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   scroll-behavior: smooth;
 }
 
-/* 🔥 HEADINGS */
+/* =========================
+   HEADINGS
+========================= */
 
-h1, h2, h3, h4, h5 {
-  font-weight: 600;
-  color: #111827;
+/* Only control font weight.
+   Let Tailwind control colors and sizes. */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
-/* 🔥 LINKS */
+/* =========================
+   LINKS
+========================= */
 
 a {
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-/* 🔥 BUTTON FEEL */
+/* =========================
+   BUTTONS
+========================= */
 
-button, a {
+button,
+a {
   cursor: pointer;
 }
 
-/* 🔥 SELECTION COLOR */
+/* =========================
+   TEXT SELECTION
+========================= */
 
 ::selection {
-  background: #f97316;
+  background: var(--primary);
   color: white;
 }
 
-/* 🔥 SCROLLBAR (optional but premium) */
+/* =========================
+   SCROLLBAR
+========================= */
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f97316;
+  background: var(--primary);
   border-radius: 10px;
 }
 
-/* 🔥 SECTION SPACING STANDARD */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
   position: relative;
 }
 
-/* 🔥 IMAGE FIX */
+/* =========================
+   IMAGES
+========================= */
 
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* 🔥 UTILITY (for consistency) */
+/* =========================
+   CONTAINER
+========================= */
 
 .container-custom {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }

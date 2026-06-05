@@ -47,7 +47,10 @@ export default function Hero() {
         <div className="text-center text-white max-w-3xl px-6">
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+          <h1
+           style={{ color: "white" }}
+           className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]"
+          > 
             Golden Triangle & Taj Mahal Tours
           </h1>
 
