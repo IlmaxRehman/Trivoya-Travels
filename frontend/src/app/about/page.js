@@ -10,12 +10,12 @@ export default function AboutPage() {
 
       {/* HERO */}
 
-      <section className="relative h-[55vh] min-h-[420px] overflow-hidden">
+      <section className="relative h-[60vh] min-h-[800px] overflow-hidden">
 
         <img
           src="/images/about/hero_about.jpg"
           alt="About Trivoya Travels"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/60"></div>
@@ -77,12 +77,12 @@ export default function AboutPage() {
 
           {/* IMAGE */}
 
-          <div className="mt-14">
+          <div className="mt-14 mb-16">
 
             <img
               src="/images/about/guide_about.png"
               alt="Trivoya Travel Experience"
-              className="w-full h-[450px] md:h-[550px] object-cover rounded-3xl shadow-xl"
+              className="w-full h-[260px] md:h-[320px] object-cover object-center rounded-3xl shadow-xl"
             />
 
           </div>
