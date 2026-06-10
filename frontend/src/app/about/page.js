@@ -7,24 +7,24 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-
+      
       {/* HERO */}
 
-      <section className="relative h-[60vh] min-h-[800px] overflow-hidden">
+      <section className="relative h-[85vh] min-h-[700px] overflow-hidden">
 
         <img
-          src="/images/about/hero_about.jpg"
+          src="/images/about/about-hero.png"
           alt="About Trivoya Travels"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-bottom"
         />
 
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="relative z-10 h-full flex items-center justify-center pt-16">
 
           <div className="text-center text-white px-6 max-w-4xl">
 
-            <span className="uppercase tracking-[4px] text-orange-300 text-sm">
+            <span className="uppercase tracking-[6px] text-orange-300 text-base font-bold">
               ABOUT TRIVOYA
             </span>
 
@@ -53,11 +53,11 @@ export default function AboutPage() {
 
           <div className="text-center max-w-4xl mx-auto">
 
-            <span className="text-orange-500 uppercase tracking-widest font-semibold">
+            <span className="text-orange-500 uppercase tracking-[6px] text-base font-bold">
               Our Story
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-8 text-gray-900">
+            <h2 className="text-5xl md:text-6xl font-extrabold mt-4 mb-8 text-gray-900">
               Passionate About Authentic Travel
             </h2>
 
@@ -77,19 +77,17 @@ export default function AboutPage() {
 
           {/* IMAGE */}
 
-          <div className="mt-14 mb-16">
-
-            <img
-              src="/images/about/guide_about.png"
-              alt="Trivoya Travel Experience"
-              className="w-full h-[260px] md:h-[320px] object-cover object-center rounded-3xl shadow-xl"
+          <div className="mt-14 flex justify-center">
+           <img
+             src="/images/about/guide_about.png"
+             alt="test"
+             className="mx-auto w-[700px] h-[280px] object-cover rounded-3xl shadow-xl"
             />
-
           </div>
 
           {/* STATS */}
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-10 md:mt-14">
 
             <div className="bg-orange-50 rounded-2xl p-6 text-center">
               <h3 className="text-4xl font-bold text-orange-500">
