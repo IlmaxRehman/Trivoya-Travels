@@ -1,3 +1,11 @@
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+  FaClock,
+} from "react-icons/fa";
+
 export const metadata = {
   title: "Contact Trivoya Travels",
   description:
@@ -10,17 +18,33 @@ export default function ContactPage() {
 
       {/* HERO */}
 
-      <section className="bg-orange-500 text-white py-24">
+      <section className="relative h-[70vh] min-h-[600px] overflow-hidden">
 
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <img
+          src="/images/contact/contact-hero.png"
+          alt="Contact Trivoya Travels"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Contact Trivoya Travels
-          </h1>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-          <p className="text-xl text-orange-100">
-            Let's plan your perfect India journey.
-          </p>
+        <div className="relative z-10 h-full flex items-center justify-center">
+
+          <div className="text-center text-white px-6 max-w-4xl">
+
+            <p className="uppercase tracking-[5px] text-orange-300 font-semibold mb-4">
+              CONTACT US
+            </p>
+
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
+              Contact Trivoya Travels
+            </h1>
+
+            <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
+              Let's plan your perfect Taj Mahal and Golden Triangle journey.
+            </p>
+
+          </div>
 
         </div>
 
@@ -28,47 +52,86 @@ export default function ContactPage() {
 
       {/* CONTACT SECTION */}
 
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
 
         <div className="max-w-6xl mx-auto px-6">
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
 
             {/* LEFT */}
 
             <div>
 
-              <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              <h2 className="text-4xl font-bold mb-10 text-gray-900">
                 Get In Touch
               </h2>
 
               <div className="space-y-6">
 
-                <div>
-                  <h3 className="font-semibold text-lg">
-                    📞 Phone
-                  </h3>
-                  <p className="text-gray-600">
-                    +91 74099 70085
-                  </p>
+                <div className="bg-gray-50 rounded-2xl p-6 flex gap-4">
+
+                  <FaPhoneAlt className="text-orange-500 text-xl mt-1" />
+
+                  <div>
+                    <h3 className="font-bold text-xl text-gray-900">
+                      Phone
+                    </h3>
+
+                    <p className="text-gray-600">
+                      +91 74099 70085
+                    </p>
+                  </div>
+
                 </div>
 
-                <div>
-                  <h3 className="font-semibold text-lg">
-                    📧 Email
-                  </h3>
-                  <p className="text-gray-600">
-                    info@trivoyatravels.com
-                  </p>
+                <div className="bg-gray-50 rounded-2xl p-6 flex gap-4">
+
+                  <FaEnvelope className="text-orange-500 text-xl mt-1" />
+
+                  <div>
+                    <h3 className="font-bold text-xl text-gray-900">
+                      Email
+                    </h3>
+
+                    <p className="text-gray-600">
+                      info@trivoyatravels.com
+                    </p>
+                  </div>
+
                 </div>
 
-                <div>
-                  <h3 className="font-semibold text-lg">
-                    📍 Location
-                  </h3>
-                  <p className="text-gray-600">
-                    Agra, Uttar Pradesh, India
-                  </p>
+                <div className="bg-gray-50 rounded-2xl p-6 flex gap-4">
+
+                  <FaMapMarkerAlt className="text-orange-500 text-xl mt-1" />
+
+                  <div>
+                    <h3 className="font-bold text-xl text-gray-900">
+                      Location
+                    </h3>
+
+                    <p className="text-gray-600">
+                      Agra, Uttar Pradesh, India
+                    </p>
+                  </div>
+
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 flex gap-4">
+
+                  <FaClock className="text-orange-500 text-xl mt-1" />
+
+                  <div>
+                    <h3 className="font-bold text-xl text-gray-900">
+                      Business Hours
+                    </h3>
+
+                    <p className="text-gray-600">
+                      Monday - Sunday
+                      <br />
+                      8:00 AM – 9:00 PM
+                    </p>
+                  </div>
+
                 </div>
 
               </div>
@@ -77,9 +140,9 @@ export default function ContactPage() {
 
             {/* RIGHT */}
 
-            <div className="bg-gray-50 p-8 rounded-3xl shadow-sm">
+            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-10">
 
-              <h2 className="text-2xl font-bold mb-6">
+              <h2 className="text-3xl font-bold mb-8 text-gray-900">
                 Send a Message
               </h2>
 
@@ -88,30 +151,30 @@ export default function ContactPage() {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
 
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
 
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
 
                 <textarea
                   rows="5"
                   placeholder="Tell us about your trip"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 ></textarea>
 
                 <button
                   type="submit"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition"
                 >
                   Send Message
                 </button>
@@ -126,33 +189,67 @@ export default function ContactPage() {
 
       </section>
 
-      {/* WHATSAPP CTA */}
+      {/* MAP */}
 
-      <section className="py-20 bg-orange-500 text-white">
+      <section className="pb-24 bg-white">
 
-        <div className="max-w-4xl mx-auto text-center px-6">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-4xl font-bold mb-4">
-            Need a Quick Response?
-          </h2>
+          <div className="text-center mb-10">
 
-          <p className="text-orange-100 mb-8">
-            Chat with us directly on WhatsApp.
-          </p>
+            <h2 className="text-4xl font-bold text-gray-900">
+              Find Us
+            </h2>
 
-          <a
-            href="https://wa.me/917409970085"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition"
-          >
-            Chat on WhatsApp
-          </a>
+            <p className="text-gray-600 mt-4">
+              Located in Agra, serving travelers across India.
+            </p>
+
+          </div>
+
+          <div className="overflow-hidden rounded-3xl shadow-lg">
+
+            <iframe
+              src="https://maps.google.com/maps?q=Agra&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              loading="lazy"
+            />
+
+          </div>
 
         </div>
 
       </section>
 
+      {/* WHATSAPP CTA */}
+
+        <section className="py-16 bg-orange-500 text-white">
+
+          <div className="max-w-4xl mx-auto text-center px-6">
+
+           <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Need a Quick Response?
+           </h2>
+
+           <p className="text-lg text-orange-100 mb-8">
+           Chat directly with our travel experts on WhatsApp.
+           </p>
+
+           <a
+           href="https://wa.me/917409970085"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="inline-block bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition"
+           >
+           Chat on WhatsApp
+           </a>
+
+           </div>
+
+        </section>
+
     </div>
   );
-}
+}  
