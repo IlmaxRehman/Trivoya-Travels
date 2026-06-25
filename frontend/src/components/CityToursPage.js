@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,28 +11,45 @@ import {
   FaStar,
 } from "react-icons/fa";
 
-import { getTours } from "@/services/api";
+export default function CityToursPage({
+  city,
+  title,
+  description,
+  hero,
+}) {
+  const [tours, setTours] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-export const metadata = {
-  title: "Tours | Trivoya Travels",
-  description:
-    "Explore unforgettable tours across Agra, Delhi and Jaipur with Trivoya Travels.",
-};
+  useEffect(() => {
+    async function loadTours() {
+      try {
+        const res = await fetch(
+          `http://127.0.0.1:8000/api/tours/?city=${city}`
+        );
 
-export default async function ToursPage() {
+        const data = await res.json();
 
-  const tours = await getTours();
+        setTours(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadTours();
+  }, [city]);
 
   return (
     <div className="bg-gray-50">
 
       {/* HERO */}
 
-      <section className="relative h-[65vh] min-h-[550px] overflow-hidden">
+      <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
 
         <Image
-          src="/images/tours/tours-hero.jpg"
-          alt="Explore Tours"
+          src={hero}
+          alt={title}
           fill
           priority
           className="object-cover"
@@ -42,15 +62,15 @@ export default async function ToursPage() {
           <div className="text-center text-white max-w-4xl px-6">
 
             <p className="uppercase tracking-[6px] text-orange-300 font-semibold mb-4">
-              TRIVOYA TRAVELS
+              DISCOVER
             </p>
 
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
-              Explore Incredible India
+              {title}
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200">
-              Handpicked experiences across Agra, Delhi, Jaipur and beyond.
+              {description}
             </p>
 
           </div>
@@ -65,28 +85,38 @@ export default async function ToursPage() {
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="text-center mb-16">
+          <div className="mb-14 text-center">
 
             <h2 className="text-4xl font-bold text-gray-900">
-              All Tour Packages
+              Popular Tours
             </h2>
 
             <p className="text-gray-600 mt-4">
-              Discover unforgettable travel experiences crafted by Trivoya Travels.
+              Handpicked experiences curated by Trivoya Travels.
             </p>
 
           </div>
 
-          {tours.length === 0 ? (
+          {loading ? (
+
+            <div className="text-center py-20">
+
+              <p className="text-lg text-gray-500">
+                Loading tours...
+              </p>
+
+            </div>
+
+          ) : tours.length === 0 ? (
 
             <div className="text-center py-20">
 
               <h3 className="text-3xl font-bold mb-4">
-                No Tours Available
+                No Tours Found
               </h3>
 
               <p className="text-gray-600">
-                Tours will appear here after adding them from the admin panel.
+                Tours for this destination will appear here.
               </p>
 
             </div>
@@ -113,7 +143,7 @@ export default async function ToursPage() {
 
                     {tour.featured && (
 
-                      <div className="absolute top-5 left-5 bg-orange-500 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold">
+                      <div className="absolute top-5 left-5 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
 
                         <FaStar />
 
@@ -174,9 +204,11 @@ export default async function ToursPage() {
                         href={`/tours/${tour.slug}`}
                         className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition"
                       >
+
                         View Details
 
                         <FaArrowRight />
+
                       </Link>
 
                     </div>

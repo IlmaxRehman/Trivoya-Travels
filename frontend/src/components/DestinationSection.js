@@ -1,9 +1,9 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Destinations() {
   return (
     <section className="bg-gray-50 py-20">
-
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section Heading */}
@@ -24,11 +24,10 @@ export default function Destinations() {
 
           {/* Agra */}
 
-          <a
-            href="/tours?city=agra"
+          <Link
+            href="/tours/agra"
             className="group relative rounded-xl overflow-hidden shadow-lg"
           >
-
             <div className="relative h-72 w-full">
 
               <Image
@@ -52,47 +51,14 @@ export default function Destinations() {
 
             </div>
 
-          </a>
-
-          {/* Jaipur */}
-
-          <a
-            href="/tours?city=jaipur"
-            className="group relative rounded-xl overflow-hidden shadow-lg"
-          >
-
-            <div className="relative h-72 w-full">
-
-              <Image
-                src="/images/destinations/jaipur.jpg"
-                alt="Hawa Mahal palace in Jaipur Rajasthan"
-                fill
-                className="object-cover group-hover:scale-105 transition duration-300"
-              />
-
-            </div>
-
-            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-
-              <h3 className="text-xl font-semibold">
-                Jaipur Tours
-              </h3>
-
-              <p className="text-sm text-gray-200">
-                Amber Fort • City Palace • Hawa Mahal
-              </p>
-
-            </div>
-
-          </a>
+          </Link>
 
           {/* Delhi */}
 
-          <a
-            href="/tours?city=delhi"
+          <Link
+            href="/tours/delhi"
             className="group relative rounded-xl overflow-hidden shadow-lg"
           >
-
             <div className="relative h-72 w-full">
 
               <Image
@@ -116,12 +82,42 @@ export default function Destinations() {
 
             </div>
 
-          </a>
+          </Link>
+
+          {/* Jaipur */}
+
+          <Link
+            href="/tours/jaipur"
+            className="group relative rounded-xl overflow-hidden shadow-lg"
+          >
+            <div className="relative h-72 w-full">
+
+              <Image
+                src="/images/destinations/jaipur.jpg"
+                alt="Hawa Mahal palace in Jaipur Rajasthan"
+                fill
+                className="object-cover group-hover:scale-105 transition duration-300"
+              />
+
+            </div>
+
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+
+              <h3 className="text-xl font-semibold">
+                Jaipur Tours
+              </h3>
+
+              <p className="text-sm text-gray-200">
+                Amber Fort • City Palace • Hawa Mahal
+              </p>
+
+            </div>
+
+          </Link>
 
         </div>
 
       </div>
-
     </section>
-  )
+  );
 }
