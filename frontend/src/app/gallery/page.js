@@ -17,6 +17,12 @@ const images = [
   "/images/gallery/gallery14.jpg"
 ];
 
+export const metadata = {
+  title: "Travel Gallery | Trivoya Travels",
+  description:
+    "Browse photos from our Taj Mahal, Agra, Delhi and Jaipur tours.",
+};
+
 export default function GalleryPage() {
   return (
     <div className="bg-gray-50">

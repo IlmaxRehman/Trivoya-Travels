@@ -211,15 +211,15 @@ export default function ContactPage() {
 
       {/* WHATSAPP CTA */}
 
-      <section className="py-16 bg-orange-500 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
 
         <div className="max-w-4xl mx-auto text-center px-6">
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Need a Quick Response?
           </h2>
 
-          <p className="text-lg text-orange-100 mb-8">
+          <p className="text-lg text-orange-100 max-w-2xl mx-auto mb-10">
             Chat directly with our travel experts on WhatsApp.
           </p>
 

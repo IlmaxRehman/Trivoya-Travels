@@ -14,7 +14,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111827] text-white mt-20">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white mt-20">
 
       <div className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-12">
 
@@ -186,7 +186,12 @@ export default function Footer() {
 
               <FaEnvelope className="text-orange-500 mt-1" />
 
-              <span>trivoyatravelss@gmail.com</span>
+              <a
+                 href="mailto:trivoyatravelss@gmail.com"
+                 className="hover:text-orange-400 transition"
+              >
+                 trivoyatravelss@gmail.com
+              </a>
 
             </div>
 
@@ -194,7 +199,12 @@ export default function Footer() {
 
               <FaPhoneAlt className="text-orange-500 mt-1" />
 
-              <span>+91 7409970085</span>
+              <a
+                 href="tel:+917409970085"
+                 className="hover:text-orange-400 transition"
+              >
+                +91 7409970085
+              </a>
 
             </div>
 
@@ -202,7 +212,14 @@ export default function Footer() {
 
               <FaWhatsapp className="text-green-500 mt-1" />
 
-              <span>WhatsApp Support Available</span>
+              <a
+                href="https://wa.me/917409970085"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-400 transition"
+              >
+                Chat on WhatsApp
+              </a>
 
             </div>
 

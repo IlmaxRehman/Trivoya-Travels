@@ -164,7 +164,7 @@ export default function Navbar() {
             <li>
 
               <Link
-                href="/contact"
+                href="/book"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-full flex items-center gap-2 transition shadow-lg"
               >
 
@@ -317,7 +317,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/book"
             onClick={() => setMenuOpen(false)}
             className="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full py-4 flex items-center justify-center gap-3 font-semibold transition"
           >
