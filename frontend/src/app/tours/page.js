@@ -1,13 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-
-import {
-  FaClock,
-  FaMapMarkerAlt,
-  FaArrowRight,
-  FaStar,
-} from "react-icons/fa";
-
+import TourFilters from "@/components/TourFilters";
 import { getTours } from "@/services/api";
 
 export const metadata = {
@@ -17,7 +9,6 @@ export const metadata = {
 };
 
 export default async function ToursPage() {
-
   const tours = await getTours();
 
   return (
@@ -72,124 +63,13 @@ export default async function ToursPage() {
             </h2>
 
             <p className="text-gray-600 mt-4">
-              Discover unforgettable travel experiences crafted by Trivoya Travels.
+              Discover unforgettable travel experiences crafted by Trivoya
+              Travels.
             </p>
 
           </div>
 
-          {tours.length === 0 ? (
-
-            <div className="text-center py-20">
-
-              <h3 className="text-3xl font-bold mb-4">
-                No Tours Available
-              </h3>
-
-              <p className="text-gray-600">
-                Tours will appear here after adding them from the admin panel.
-              </p>
-
-            </div>
-
-          ) : (
-
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-
-              {tours.map((tour) => (
-
-                <div
-                  key={tour.id}
-                  className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group"
-                >
-
-                  <div className="relative h-64 overflow-hidden">
-
-                    <Image
-                      src={tour.hero_image}
-                      alt={tour.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition duration-500"
-                    />
-
-                    {tour.featured && (
-
-                      <div className="absolute top-5 left-5 bg-orange-500 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold">
-
-                        <FaStar />
-
-                        Featured
-
-                      </div>
-
-                    )}
-
-                  </div>
-
-                  <div className="p-7">
-
-                    <h3 className="text-2xl font-bold mb-3">
-                      {tour.name}
-                    </h3>
-
-                    <p className="text-gray-600 mb-6">
-                      {tour.short_description}
-                    </p>
-                                        <div className="space-y-3 mb-7">
-
-                      <div className="flex items-center gap-3 text-gray-600">
-
-                        <FaClock className="text-orange-500" />
-
-                        <span>{tour.duration}</span>
-
-                      </div>
-
-                      <div className="flex items-center gap-3 text-gray-600">
-
-                        <FaMapMarkerAlt className="text-orange-500" />
-
-                        <span className="capitalize">
-                          {tour.city}
-                        </span>
-
-                      </div>
-
-                    </div>
-
-                    <div className="flex items-center justify-between">
-
-                      <div>
-
-                        <p className="text-sm text-gray-500">
-                          Starting From
-                        </p>
-
-                        <h4 className="text-3xl font-bold text-orange-500">
-                          ₹{tour.price}
-                        </h4>
-
-                      </div>
-
-                      <Link
-                        href={`/tours/${tour.slug}`}
-                        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition"
-                      >
-                        View Details
-
-                        <FaArrowRight />
-                      </Link>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              ))}
-
-            </div>
-
-          )}
+          <TourFilters tours={tours} />
 
         </div>
 

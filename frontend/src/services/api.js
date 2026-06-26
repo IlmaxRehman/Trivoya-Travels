@@ -41,7 +41,7 @@ export async function getBlog(slug) {
 }
 
 export async function createBooking(data) {
-  const res = await fetch(`${API_BASE}/bookings/`, {
+  const res = await fetch(`${API_BASE}/api/bookings/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
