@@ -130,9 +130,15 @@ class BlogPost(models.Model):
 
     slug = models.SlugField(unique=True)
 
-    content = models.TextField()
+    content = models.TextField(
+         help_text="You can write the full blog article here."
+    )
 
-    featured_image = models.URLField()
+    featured_image = models.ImageField(
+         upload_to="blogs/",
+         blank=True,
+         null=True,
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
 

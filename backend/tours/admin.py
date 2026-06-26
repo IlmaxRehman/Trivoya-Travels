@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.utils.html import format_html
+
 from .models import (
     Tour,
     TourImage,
@@ -22,7 +24,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Tour)
 class TourAdmin(admin.ModelAdmin):
+
     list_display = (
+        "hero_preview",
         "name",
         "city",
         "category",
@@ -51,6 +55,11 @@ class TourAdmin(admin.ModelAdmin):
         "display_order",
     )
 
+    readonly_fields = (
+        "created_at",
+        "updated_at",
+    )
+
     prepopulated_fields = {
         "slug": ("name",)
     }
@@ -62,9 +71,20 @@ class TourAdmin(admin.ModelAdmin):
 
     inlines = [TourImageInline]
 
+    def hero_preview(self, obj):
+        if obj.hero_image:
+            return format_html(
+                '<img src="{}" width="90" style="border-radius:8px;" />',
+                obj.hero_image.url,
+            )
+        return "-"
+
+    hero_preview.short_description = "Hero Image"
+
 
 @admin.register(TourImage)
 class TourImageAdmin(admin.ModelAdmin):
+
     list_display = (
         "tour",
         "caption",
@@ -78,7 +98,9 @@ class TourImageAdmin(admin.ModelAdmin):
 
 @admin.register(BlogPost)
 class BlogPostAdmin(admin.ModelAdmin):
+
     list_display = (
+        "featured_preview",
         "title",
         "is_published",
         "created_at",
@@ -97,9 +119,20 @@ class BlogPostAdmin(admin.ModelAdmin):
         "slug": ("title",)
     }
 
+    def featured_preview(self, obj):
+        if obj.featured_image:
+            return format_html(
+                '<img src="{}" width="90" style="border-radius:8px;" />',
+                obj.featured_image.url,
+            )
+        return "-"
+
+    featured_preview.short_description = "Image"
+
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
+
     list_display = (
         "name",
         "tour",
@@ -110,6 +143,7 @@ class BookingAdmin(admin.ModelAdmin):
 
     list_filter = (
         "travel_date",
+        "tour",
     )
 
     search_fields = (
