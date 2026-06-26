@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import {
+  FaMapMarkerAlt,
+  FaClock,
+  FaCheckCircle,
+  FaArrowRight,
+  FaStar,
+} from "react-icons/fa";
+
 export default function TourCard({ tour }) {
   if (!tour) return null;
 
@@ -15,10 +23,11 @@ export default function TourCard({ tour }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col">
+    <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group flex flex-col">
 
-      {/* IMAGE */}
-      <div className="relative h-48 overflow-hidden">
+      {/* Image */}
+
+      <div className="relative h-56 overflow-hidden">
 
         <Image
           src={getImage()}
@@ -27,71 +36,113 @@ export default function TourCard({ tour }) {
           className="object-cover group-hover:scale-110 transition duration-500"
         />
 
-        {/* CITY BADGE */}
-        {tour.city && (
-          <span className="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-            📍 {tour.city}
-          </span>
+        {tour.featured && (
+
+          <div className="absolute top-4 right-4 bg-orange-500 text-white px-4 py-2 rounded-full text-sm flex items-center gap-2 shadow-lg">
+
+            <FaStar />
+
+            Featured
+
+          </div>
+
         )}
+
+        <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 text-sm font-semibold">
+
+          <FaMapMarkerAlt className="text-orange-500" />
+
+          <span className="capitalize">{tour.city}</span>
+
+        </div>
 
       </div>
 
-      {/* CONTENT */}
-      <div className="p-5 flex flex-col flex-grow">
+      {/* Content */}
 
-        {/* TITLE */}
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+      <div className="p-6 flex flex-col flex-grow">
+
+        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+
           {tour.name}
+
         </h3>
 
-        {/* META */}
-        <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+        <div className="flex items-center gap-2 text-gray-500 mb-5">
 
-          {tour.duration && (
-            <span>🕒 {tour.duration}</span>
-          )}
+          <FaClock className="text-orange-500" />
 
-        </div>
-
-        {/* HIGHLIGHTS */}
-        <div className="space-y-2 mb-5 text-sm text-gray-600">
-
-          <p>✓ Hotel Pickup</p>
-          <p>✓ Professional Guide</p>
-          <p>✓ AC Transport</p>
+          {tour.duration}
 
         </div>
 
-        {/* DESCRIPTION */}
-        <p className="text-gray-500 text-sm line-clamp-2 mb-5">
-          {tour.description}
+        <div className="space-y-3 mb-6">
+
+          <div className="flex items-center gap-3">
+
+            <FaCheckCircle className="text-green-500" />
+
+            <span>Hotel Pickup Included</span>
+
+          </div>
+
+          <div className="flex items-center gap-3">
+
+            <FaCheckCircle className="text-green-500" />
+
+            <span>Professional Tour Guide</span>
+
+          </div>
+
+          <div className="flex items-center gap-3">
+
+            <FaCheckCircle className="text-green-500" />
+
+            <span>Comfortable AC Vehicle</span>
+
+          </div>
+
+        </div>
+
+        <p className="text-gray-600 leading-7 line-clamp-3 mb-6">
+
+          {tour.short_description || tour.description}
+
         </p>
 
-        {/* FOOTER */}
-        <div className="mt-auto">
+        <div className="mt-auto flex items-center justify-between">
 
-          <div className="mb-4">
+          <div>
 
-            <p className="text-xs text-gray-400 uppercase tracking-wide">
+            <p className="text-sm text-gray-500">
+
               Starting From
+
             </p>
 
-            <p className="text-3xl font-bold text-orange-500">
-              ${tour.price}
-            </p>
+            <h3 className="text-3xl font-bold text-orange-500">
+
+              ₹{tour.price}
+
+            </h3>
 
           </div>
 
           <Link
             href={`/tours/${tour.slug}`}
-            className="block w-full text-center bg-orange-500 text-white py-3 rounded-xl font-semibold hover:bg-orange-600 transition"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl flex items-center gap-2 transition"
           >
-            View Tour
+
+            View
+
+            <FaArrowRight />
+
           </Link>
 
         </div>
 
       </div>
+
     </div>
   );
 }
