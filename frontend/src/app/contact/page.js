@@ -73,26 +73,7 @@ export default function ContactPage() {
 
               <div className="space-y-6">
 
-                <div className="bg-gray-50 rounded-2xl p-6 flex gap-4">
-
-                  <FaPhoneAlt className="text-orange-500 text-xl mt-1" />
-
-                  <div>
-
-                    <h3 className="font-bold text-xl text-gray-900">
-                      Phone
-                    </h3>
-
-                    <a
-                      href="tel:+917409970085"
-                      className="text-gray-600 hover:text-orange-500 transition"
-                    >
-                      +91 74099 70085
-                    </a>
-
-                  </div>
-
-                </div>
+                
 
                 <div className="bg-gray-50 rounded-2xl p-6 flex gap-4">
 

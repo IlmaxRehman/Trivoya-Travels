@@ -195,18 +195,7 @@ export default function Footer() {
 
             </div>
 
-            <div className="flex items-start gap-3">
-
-              <FaPhoneAlt className="text-orange-500 mt-1" />
-
-              <a
-                 href="tel:+917409970085"
-                 className="hover:text-orange-400 transition"
-              >
-                +91 7409970085
-              </a>
-
-            </div>
+        
 
             <div className="flex items-start gap-3">
 

@@ -216,19 +216,35 @@ export default function TourFilters({ tours }) {
 
                 <div className="mt-auto flex items-center justify-between">
 
-                  <div>
+                 <div>
 
-                    <p className="text-sm text-gray-500">
-                      Starting From
-                    </p>
+                   <p className="text-sm text-gray-500">
+                     Starting From
+                   </p>
 
-                    <h4 className="text-3xl font-bold text-orange-500">
+                   {tour.discount_price ? (
 
-                      ₹{tour.price}
+                    <div className="flex items-center gap-2">
 
-                    </h4>
+                     <span className="text-3xl font-bold text-orange-500">
+                      ₹{Number(tour.discount_price).toLocaleString("en-IN")}
+                     </span>
 
-                  </div>
+                     <span className="text-lg text-gray-400 line-through">
+                       ₹{Number(tour.price).toLocaleString("en-IN")}
+                     </span>
+
+                    </div>
+
+                   ) : (
+
+                   <h4 className="text-3xl font-bold text-orange-500">
+                    ₹{Number(tour.price).toLocaleString("en-IN")}
+                   </h4>
+
+                   )}
+
+                 </div>
 
                   <Link
                     href={`/tours/${tour.slug}`}
