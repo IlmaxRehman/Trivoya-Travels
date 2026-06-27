@@ -15,6 +15,16 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [tourOpen, setTourOpen] = useState(false);
+  const openMenu = () => {
+        clearTimeout(window.__tourTimeout);
+        setTourOpen(true);
+  };
+
+  const closeMenu = () => {
+     window.__tourTimeout = setTimeout(() => {
+     setTourOpen(false);
+     }, 200);
+  };
   const [mobileToursOpen, setMobileToursOpen] = useState(false);
 
   useEffect(() => {
@@ -44,12 +54,13 @@ export default function Navbar() {
 
           <Link href="/" className="flex items-center">
 
-            <div className="relative h-12 w-44">
+            <div className="relative h-12 w-48">
 
               <Image
                 src="/images/logo.png"
                 alt="Trivoya Travels"
                 fill
+                sizes="192px"
                 priority
                 className="object-contain"
               />
@@ -74,9 +85,9 @@ export default function Navbar() {
             </li>
 
             <li
-              className="relative"
-              onMouseEnter={() => setTourOpen(true)}
-              onMouseLeave={() => setTourOpen(false)}
+              className="relative "
+              onMouseEnter={openMenu}
+              onMouseLeave={closeMenu}
             >
 
               <button className="flex items-center gap-2 hover:text-orange-500 transition">
@@ -88,39 +99,39 @@ export default function Navbar() {
               </button>
 
               {tourOpen && (
+                <div className="absolute left-0 top-full pt-4 w-64">
+                 <div className="rounded-2xl bg-white shadow-2xl py-3 text-gray-700">
 
-                <div className="absolute left-0 top-full mt-4 w-64 rounded-2xl bg-white shadow-2xl py-3 text-gray-700">
-
-                  <Link
+                 <Link
                     href="/tours"
                     className="block px-6 py-3 hover:bg-orange-50"
                   >
-                    All Tours
+                   All Tours
                   </Link>
 
                   <Link
                     href="/tours/agra"
                     className="block px-6 py-3 hover:bg-orange-50"
                   >
-                    Agra Tours
+                   Agra Tours
                   </Link>
 
                   <Link
                     href="/tours/delhi"
                     className="block px-6 py-3 hover:bg-orange-50"
                   >
-                    Delhi Tours
+                     Delhi Tours
                   </Link>
 
                   <Link
                     href="/tours/jaipur"
                     className="block px-6 py-3 hover:bg-orange-50"
                   >
-                    Jaipur Tours
+                   Jaipur Tours
                   </Link>
 
+                  </div>
                 </div>
-
               )}
 
             </li>

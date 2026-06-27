@@ -1,42 +1,57 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import TourCard from "./TourCard"
+import { useEffect, useState } from "react";
+import TourCard from "./TourCard";
 
 export default function PopularTours() {
-
-  const [tours, setTours] = useState([])
+  const [tours, setTours] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/tours/")
-      .then(res => res.json())
-      .then(data => setTours(data.slice(0, 3))) // only 3
-  }, [])
+    async function loadTours() {
+      try {
+        const res = await fetch("http://127.0.0.1:8000/api/tours/");
+        const data = await res.json();
+
+        // Show featured tours first
+        const featuredTours = data.filter((tour) => tour.featured);
+
+        if (featuredTours.length >= 3) {
+          setTours(featuredTours.slice(0, 3));
+        } else {
+          // Fill remaining cards with other tours
+          const remaining = data.filter((tour) => !tour.featured);
+          setTours([...featuredTours, ...remaining].slice(0, 3));
+        }
+      } catch (err) {
+        console.error("Failed to load tours:", err);
+      }
+    }
+
+    loadTours();
+  }, []);
 
   return (
-
     <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
 
-      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Popular Tours
+          </h2>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-          Popular Tours
-        </h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Explore our most loved travel experiences, carefully curated to
+            showcase the very best of North India.
+          </p>
+        </div>
 
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          Discover our most booked and highly rated tour experiences across India.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-8">
-
-          {tours.map(tour => (
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+          {tours.map((tour) => (
             <TourCard key={tour.id} tour={tour} />
           ))}
-
         </div>
 
       </div>
-
     </section>
-  )
+  );
 }

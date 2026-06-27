@@ -27,8 +27,11 @@ export default function CityToursPage({
           `http://127.0.0.1:8000/api/tours/?city=${city}`
         );
 
-        const data = await res.json();
+        if (!res.ok) {
+          throw new Error("Failed to fetch tours");
+        }
 
+        const data = await res.json();
         setTours(data);
       } catch (err) {
         console.error(err);
@@ -43,9 +46,9 @@ export default function CityToursPage({
   return (
     <div className="bg-gray-50">
 
-      {/* HERO */}
+      {/* Hero */}
 
-      <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
+      <section className="relative h-[45vh] md:h-[500px] overflow-hidden">
 
         <Image
           src={hero}
@@ -55,21 +58,21 @@ export default function CityToursPage({
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="relative z-10 flex h-full items-center justify-center">
 
-          <div className="text-center text-white max-w-4xl px-6">
+          <div className="max-w-4xl px-6 text-center text-white">
 
-            <p className="uppercase tracking-[6px] text-orange-300 font-semibold mb-4">
+            <p className="mb-4 uppercase tracking-[6px] text-orange-300 font-semibold">
               DISCOVER
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
+            <h1 className="mb-6 text-5xl md:text-6xl font-extrabold">
               {title}
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-200">
+            <p className="mx-auto max-w-3xl text-lg text-gray-200 leading-8">
               {description}
             </p>
 
@@ -79,19 +82,19 @@ export default function CityToursPage({
 
       </section>
 
-      {/* TOURS */}
+      {/* Tours */}
 
-      <section className="py-24">
+      <section className="py-20">
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="mb-14 text-center">
+          <div className="text-center mb-14">
 
             <h2 className="text-4xl font-bold text-gray-900">
               Popular Tours
             </h2>
 
-            <p className="text-gray-600 mt-4">
+            <p className="mt-4 text-gray-600">
               Handpicked experiences curated by Trivoya Travels.
             </p>
 
@@ -99,7 +102,7 @@ export default function CityToursPage({
 
           {loading ? (
 
-            <div className="text-center py-20">
+            <div className="py-20 text-center">
 
               <p className="text-lg text-gray-500">
                 Loading tours...
@@ -109,9 +112,9 @@ export default function CityToursPage({
 
           ) : tours.length === 0 ? (
 
-            <div className="text-center py-20">
+            <div className="py-20 text-center">
 
-              <h3 className="text-3xl font-bold mb-4">
+              <h3 className="mb-4 text-3xl font-bold">
                 No Tours Found
               </h3>
 
@@ -123,27 +126,32 @@ export default function CityToursPage({
 
           ) : (
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-
-              {tours.map((tour) => (
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                              {tours.map((tour) => (
 
                 <div
                   key={tour.id}
-                  className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group"
+                  className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                 >
 
-                  <div className="relative h-64 overflow-hidden">
+                  {/* Tour Image */}
 
-                    <Image
+                  <div className="relative h-64 overflow-hidden bg-gray-100">
+
+                    <img
                       src={tour.hero_image}
                       alt={tour.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition duration-500"
+                      onError={(e) => {
+                      console.log("IMAGE FAILED", tour.hero_image);
+                      e.target.style.border = "4px solid red";
+                    }}
+                      onLoad={() => console.log("IMAGE LOADED")}
+                      className="w-full h-full object-cover"
                     />
 
                     {tour.featured && (
 
-                      <div className="absolute top-5 left-5 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                      <div className="absolute top-5 left-5 bg-orange-500 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold shadow-lg">
 
                         <FaStar />
 
@@ -155,16 +163,23 @@ export default function CityToursPage({
 
                   </div>
 
-                  <div className="p-7">
+                  {/* Content */}
 
-                    <h3 className="text-2xl font-bold mb-3">
+                  <div className="p-7 flex flex-col">
+
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+
                       {tour.name}
+
                     </h3>
 
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 leading-7 mb-6">
+
                       {tour.short_description}
+
                     </p>
-                                        <div className="space-y-3 mb-7">
+
+                    <div className="mt-6 space-y-3">
 
                       <div className="flex items-center gap-3 text-gray-600">
 
@@ -186,23 +201,43 @@ export default function CityToursPage({
 
                     </div>
 
-                    <div className="flex items-center justify-between">
+                    <div className="mt-auto pt-7 flex items-end justify-between">
 
                       <div>
 
-                        <p className="text-sm text-gray-500">
+                        <p className="text-xs uppercase tracking-wider text-gray-500">
+
                           Starting From
+
                         </p>
 
-                        <h4 className="text-3xl font-bold text-orange-500">
-                          ₹{tour.price}
+                        {tour.discount_price ? (
+
+                          <div className="mt-1">
+
+                             <h4 className="text-3xl font-bold text-orange-500">
+                              ₹{Number(tour.discount_price).toLocaleString("en-IN")}
+                            </h4>
+
+                            <p className="text-gray-400 line-through text-sm">
+                               ₹{Number(tour.price).toLocaleString("en-IN")}
+                            </p>
+
+                        </div>
+
+                    ) : (
+
+                        <h4 className="text-3xl font-bold text-orange-500 mt-1">
+                          ₹{Number(tour.price).toLocaleString("en-IN")}
                         </h4>
+
+                    )}
 
                       </div>
 
                       <Link
                         href={`/tours/${tour.slug}`}
-                        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition"
+                        className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-semibold flex items-center gap-2 transition"
                       >
 
                         View Details
@@ -226,7 +261,6 @@ export default function CityToursPage({
         </div>
 
       </section>
-
     </div>
   );
 }

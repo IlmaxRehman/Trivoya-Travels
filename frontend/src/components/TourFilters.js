@@ -141,12 +141,20 @@ export default function TourFilters({ tours }) {
 
               <div className="relative h-64 overflow-hidden">
 
-                <Image
-                  src={tour.hero_image}
-                  alt={tour.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition duration-500"
-                />
+                {tour.hero_image ? (
+                 <Image
+                   src={tour.hero_image}
+                   alt={tour.name}
+                   fill
+                   unoptimized
+                   sizes="100vw"
+                   className="object-cover group-hover:scale-110 transition duration-500"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center bg-gray-200 text-gray-500">
+                     No Image Available
+                  </div>
+                )}
 
                 {tour.featured && (
 

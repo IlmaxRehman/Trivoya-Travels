@@ -1,4 +1,5 @@
 from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 class Category(models.Model):
@@ -30,13 +31,18 @@ class Tour(models.Model):
     )
 
     name = models.CharField(max_length=200)
+
     slug = models.SlugField(unique=True)
 
     short_description = models.CharField(max_length=300)
 
-    description = models.TextField()
+    description = CKEditor5Field(
+        config_name="extends"
+    )
 
-    itinerary = models.TextField()
+    itinerary = CKEditor5Field(
+        config_name="extends"
+    )
 
     highlights = models.TextField(
         blank=True,
@@ -67,7 +73,9 @@ class Tour(models.Model):
         null=True,
     )
 
-    hero_image = models.ImageField(upload_to="tours/hero/")
+    hero_image = models.ImageField(
+        upload_to="tours/hero/"
+    )
 
     featured = models.BooleanField(default=False)
 
@@ -108,7 +116,9 @@ class TourImage(models.Model):
         on_delete=models.CASCADE,
     )
 
-    image = models.ImageField(upload_to="tours/gallery/")
+    image = models.ImageField(
+        upload_to="tours/gallery/"
+    )
 
     caption = models.CharField(
         max_length=200,
@@ -130,14 +140,14 @@ class BlogPost(models.Model):
 
     slug = models.SlugField(unique=True)
 
-    content = models.TextField(
-         help_text="You can write the full blog article here."
+    content = CKEditor5Field(
+        config_name="extends"
     )
 
     featured_image = models.ImageField(
-         upload_to="blogs/",
-         blank=True,
-         null=True,
+        upload_to="blogs/",
+        blank=True,
+        null=True,
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
