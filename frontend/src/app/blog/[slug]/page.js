@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   FaCalendarAlt,
@@ -6,9 +5,13 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 
+const BACKEND_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL ||
+  "http://127.0.0.1:8000";
+
 async function getPost(slug) {
   const res = await fetch(
-    `http://127.0.0.1:8000/api/blog/${slug}/`,
+    `${BACKEND_URL}/api/blog/${slug}/`,
     {
       cache: "no-store",
     }
@@ -28,7 +31,17 @@ export default async function BlogPost({ params }) {
 
   const readingTime = Math.max(
     1,
-    Math.ceil((post.content || "").replace(/<[^>]*>/g, "").split(" ").length / 200)
+    Math.ceil(
+      (post.content || "")
+        .replace(/<[^>]*>/g, "")
+        .split(/\s+/).length / 200
+    )
+  );
+
+  // Convert relative CKEditor image paths to absolute backend URLs
+  const html = (post.content || "").replace(
+    /src="\/media\//g,
+    `src="${BACKEND_URL}/media/`
   );
 
   return (
@@ -39,10 +52,10 @@ export default async function BlogPost({ params }) {
       <section className="relative h-[45vh] md:h-[500px] overflow-hidden">
 
         {post.featured_image ? (
-         <img
-           src={post.featured_image}
-           alt={post.title}
-           className="absolute inset-0 w-full h-full object-cover"
+          <img
+            src={post.featured_image}
+            alt={post.title}
+            className="absolute inset-0 w-full h-full object-cover"
           />
         ) : (
           <div className="absolute inset-0 bg-gray-300" />
@@ -102,9 +115,13 @@ export default async function BlogPost({ params }) {
               prose-p:leading-8
               prose-li:leading-8
               prose-strong:text-gray-900
+              prose-img:rounded-2xl
+              prose-img:shadow-lg
+              prose-img:mx-auto
+              prose-img:w-full
             "
             dangerouslySetInnerHTML={{
-              __html: post.content,
+              __html: html,
             }}
           />
 
