@@ -3,14 +3,25 @@
 import { useEffect, useState } from "react";
 import TourCard from "./TourCard";
 
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
 export default function PopularTours() {
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
     async function loadTours() {
       try {
-        const res = await fetch("http://127.0.0.1:8000/api/tours/");
+        const res = await fetch(`${API_BASE}/api/tours/`);
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch tours");
+        }
+
         const data = await res.json();
+        console.log("API_BASE:", API_BASE);
+        console.log("Tours API Response:", data);
+        console.log("Featured Tours:", data.filter((tour) => tour.featured));
 
         // Show featured tours first
         const featuredTours = data.filter((tour) => tour.featured);
@@ -33,7 +44,6 @@ export default function PopularTours() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Popular Tours
@@ -50,7 +60,6 @@ export default function PopularTours() {
             <TourCard key={tour.id} tour={tour} />
           ))}
         </div>
-
       </div>
     </section>
   );

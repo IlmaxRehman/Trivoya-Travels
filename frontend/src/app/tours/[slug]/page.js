@@ -1,7 +1,14 @@
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
 async function getTour(slug) {
-  const res = await fetch(`http://127.0.0.1:8000/api/tours/${slug}/`, {
+  const res = await fetch(`${API_BASE}/api/tours/${slug}/`, {
     cache: "no-store",
   });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch tour");
+  }
 
   return res.json();
 }

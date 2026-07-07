@@ -23,8 +23,14 @@ export default function CityToursPage({
   useEffect(() => {
     async function loadTours() {
       try {
+        const API_BASE =
+         process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
+         console.log("API_BASE:", API_BASE);
+         console.log("Fetching:", `${API_BASE}/api/tours/?city=${city}`);
+
         const res = await fetch(
-          `http://127.0.0.1:8000/api/tours/?city=${city}`
+         `${API_BASE}/api/tours/?city=${city}`
         );
 
         if (!res.ok) {

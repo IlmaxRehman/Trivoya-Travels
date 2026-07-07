@@ -1,12 +1,17 @@
-export default async function sitemap() {
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
-  const res = await fetch("http://127.0.0.1:8000/api/tours/")
-  const tours = await res.json()
+export default async function sitemap() {
+  const res = await fetch(`${API_BASE}/api/tours/`, {
+    cache: "no-store",
+  });
+
+  const tours = await res.json();
 
   const tourPages = tours.map((tour) => ({
     url: `https://trivoyatravels.com/tours/${tour.slug}`,
     lastModified: new Date(),
-  }))
+  }));
 
   return [
     {
@@ -17,6 +22,6 @@ export default async function sitemap() {
       url: "https://trivoyatravels.com/tours",
       lastModified: new Date(),
     },
-    ...tourPages
-  ]
+    ...tourPages,
+  ];
 }

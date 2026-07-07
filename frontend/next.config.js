@@ -2,6 +2,21 @@
 const nextConfig = {
   images: {
     remotePatterns: [
+      // Render Backend Media
+      {
+        protocol: "https",
+        hostname: "trivoya-travels.onrender.com",
+        pathname: "/media/**",
+      },
+
+      // Cloudinary Images
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
+      },
+
+      // Local Development
       {
         protocol: "http",
         hostname: "127.0.0.1",
