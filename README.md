@@ -18,8 +18,6 @@
 
 ---
 
-**🚧 Live Demo:** Coming Soon
-
 **🌐 Domain:** https://trivoyatravels.com
 
 </div>
