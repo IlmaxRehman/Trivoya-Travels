@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "cloudinary",
-    "django.contrib.staticfiles",
+    
 
     "rest_framework",
     "rest_framework_simplejwt",
@@ -164,7 +164,7 @@ CLOUDINARY_STORAGE = {
     "API_SECRET": os.getenv("CLOUDINARY_API_SECRET"),
 }
 
-DEFAULT_AUTO_FIELD = "cloudinary_storage.storage.MediaCloudinaryStorage"
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # CORS

@@ -1,0 +1,756 @@
+[
+{
+  "model": "tours.category",
+  "pk": 1,
+  "fields": {
+    "name": "Taj Mahal Tours",
+    "slug": "taj-mahal-tours"
+  }
+},
+{
+  "model": "tours.category",
+  "pk": 2,
+  "fields": {
+    "name": "Agra Heritage Tours",
+    "slug": "agra-heritage-tours"
+  }
+},
+{
+  "model": "tours.category",
+  "pk": 3,
+  "fields": {
+    "name": "Fatehpur Sikri Tours",
+    "slug": "fatehpur-sikri-tours"
+  }
+},
+{
+  "model": "tours.category",
+  "pk": 4,
+  "fields": {
+    "name": "Delhi City Tours",
+    "slug": "delhi-city-tours"
+  }
+},
+{
+  "model": "tours.category",
+  "pk": 5,
+  "fields": {
+    "name": "Jaipur Heritage Tours",
+    "slug": "jaipur-heritage-tours"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 1,
+  "fields": {
+    "city": "agra",
+    "category": 1,
+    "name": "Sunrise Taj Mahal Tour",
+    "slug": "sunrise-taj-mahal-tour",
+    "short_description": "Experience the breathtaking beauty of the Taj Mahal at sunrise with a guided tour, private transportation, and visits to Agra's iconic landmarks.",
+    "description": "<p>Experience the breathtaking beauty of the Taj Mahal at sunrise, when the first rays of sunlight illuminate its magnificent white marble. This early morning tour is perfect for travelers who want to avoid the crowds and witness one of the world's most iconic monuments in its most magical setting.</p><p>Your journey begins with an early morning hotel pickup in a comfortable air-conditioned vehicle. Upon arrival, your professional guide will take you through the fascinating history, architecture, and timeless love story behind the Taj Mahal. Capture unforgettable photographs and enjoy the peaceful atmosphere before continuing your sightseeing.</p><p>After visiting the Taj Mahal, explore the historic Agra Fort, a UNESCO World Heritage Site that served as the main residence of the Mughal emperors. If time permits, visit Mehtab Bagh for panoramic views of the Taj Mahal across the Yamuna River.</p><p>This tour offers the perfect combination of history, culture, architecture, and unforgettable memories, making it an ideal choice for couples, families, solo travelers, and photography enthusiasts.</p>",
+    "itinerary": "<p>05:30 AM – Hotel pickup from Agra.</p><p>06:00 AM – Arrive at the Taj Mahal and enjoy the breathtaking sunrise with a guided tour.</p><p>08:00 AM – Breakfast at a recommended local restaurant (optional).</p><p>09:00 AM – Visit the magnificent Agra Fort and explore its palaces and courtyards.</p><p>11:00 AM – Stop at Mehtab Bagh for stunning views of the Taj Mahal (optional).</p><p>12:00 PM – Visit a local marble inlay handicraft workshop.</p><p>01:00 PM – Drop back to your hotel or preferred location in Agra.</p>",
+    "highlights": "Sunrise view of the Taj Mahal\r\nProfessional English-speaking guide\r\nUNESCO World Heritage monuments\r\nPrivate air-conditioned vehicle\r\nExcellent photography opportunities\r\nHotel pickup and drop-off",
+    "inclusions": "Hotel pickup and drop-off\r\nPrivate AC vehicle\r\nProfessional tour guide\r\nMineral water bottles\r\nParking charges\r\nFuel charges\r\nAll toll taxes",
+    "exclusions": "Monument entrance tickets\r\nMeals and beverages\r\nPersonal expenses\r\nTips and gratuities\r\nCamera fees (if applicable)",
+    "duration": "6 Hours",
+    "price": "3499.00",
+    "discount_price": "2999.00",
+    "hero_image": "tours/hero/Taj_Mahal_in_India.jpg",
+    "featured": false,
+    "display_order": 1,
+    "seo_title": "Sunrise Taj Mahal Tour | Early Morning Guided Tour in Agra",
+    "seo_description": "Book the Sunrise Taj Mahal Tour with Trivoya Travels and experience the beauty of the Taj Mahal at dawn with expert guides, private transport, and Agra sightseeing.",
+    "meta_keywords": "sunrise taj mahal tour, taj mahal sunrise, agra sunrise tour, taj mahal guided tour, agra sightseeing, trivoya travels",
+    "is_active": true,
+    "created_at": "2026-06-26T09:27:21.263Z",
+    "updated_at": "2026-06-26T15:51:23.483Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 2,
+  "fields": {
+    "city": "agra",
+    "category": 1,
+    "name": "Skip-the-Line Taj Mahal Tour",
+    "slug": "skip-the-line-taj-mahal-tour",
+    "short_description": "Experience the iconic Taj Mahal without long waiting lines. Enjoy priority entry, a knowledgeable local guide, and a comfortable sightseeing experience in Agra.",
+    "description": "<p>Skip the long queues and make the most of your visit to one of the <strong>Seven Wonders of the World</strong> with our <strong>Skip-the-Line Taj Mahal Tour</strong>. Designed for travelers who value comfort and convenience, this guided experience allows you to spend more time exploring the magnificent monument and less time waiting.</p><p>Your professional guide will share fascinating stories about Emperor Shah Jahan, Mumtaz Mahal, and the architectural brilliance behind this <strong>UNESCO World Heritage Site</strong>. Admire the intricate marble carvings, beautiful gardens, and breathtaking symmetry that make the Taj Mahal one of the world's most celebrated landmarks.</p><p>The tour also includes a visit to<strong> Agra Fort</strong>, another UNESCO World Heritage Site, where you'll discover the royal residence of the Mughal emperors. Optional stops at local handicraft workshops provide an opportunity to witness traditional marble inlay artistry.</p><p>Whether you're visiting Agra for the first time or returning to admire its beauty once again, this tour offers a smooth, informative, and memorable experience.</p>",
+    "itinerary": "<p>08:00 AM – Hotel pickup from Agra.</p><p>08:30 AM – Priority entry to the Taj Mahal with your professional guide.</p><p>10:30 AM – Explore the beautiful Mughal gardens and marble architecture.</p><p>11:30 AM – Visit Agra Fort and learn about Mughal history.</p><p>01:00 PM – Optional visit to a marble handicraft workshop.</p><p>02:00 PM – Lunch at a recommended local restaurant (optional).</p><p>03:00 PM – Drop back to your hotel or preferred location.</p>",
+    "highlights": "Priority Skip-the-Line Entry\r\nProfessional Licensed Tour Guide\r\nVisit the Taj Mahal\r\nExplore Agra Fort\r\nComfortable Air-Conditioned Vehicle\r\nExcellent Photography Opportunities",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate AC Vehicle\r\nProfessional Tour Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nMeals & Beverages\r\nPersonal Expenses\r\nTips & Gratuities\r\nCamera Fees (if applicable)",
+    "duration": "7 Hours",
+    "price": "2999.00",
+    "discount_price": "2499.00",
+    "hero_image": "tours/hero/20251213_124959.jpg",
+    "featured": true,
+    "display_order": 3,
+    "seo_title": "Skip-the-Line Taj Mahal Tour | Priority Entry Guided Tour in Agra",
+    "seo_description": "Book the Skip-the-Line Taj Mahal Tour with Trivoya Travels and enjoy priority entry, expert local guides, private transport, and an unforgettable Agra sightseeing experience.",
+    "meta_keywords": "skip the line taj mahal tour, taj mahal priority entry, agra day tour, taj mahal guided tour, agra sightseeing, trivoya travels",
+    "is_active": true,
+    "created_at": "2026-06-26T15:49:17.128Z",
+    "updated_at": "2026-06-26T15:50:53.823Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 3,
+  "fields": {
+    "city": "agra",
+    "category": 2,
+    "name": "Agra Fort & Mehtab Bagh Tour",
+    "slug": "agra-fort-mehtab-bagh-tour",
+    "short_description": "Explore Agra's magnificent Mughal heritage with a guided tour of Agra Fort, Mehtab Bagh, and local cultural attractions while enjoying breathtaking views of the Taj Mahal.",
+    "description": "<p>Discover the rich history of Agra beyond the Taj Mahal with this carefully curated heritage tour. Visit the magnificent Agra Fort, one of India's finest Mughal forts and a UNESCO World Heritage Site, where emperors once ruled the Mughal Empire.</p><p>Continue your journey to Mehtab Bagh, a beautiful riverside garden famous for offering one of the most stunning panoramic views of the Taj Mahal. Stroll through peaceful gardens while learning fascinating stories about Mughal architecture and history from your expert local guide.</p><p>The experience also includes a visit to traditional marble inlay workshops where skilled artisans continue centuries-old craftsmanship. Perfect for history lovers, photographers, and travelers seeking a deeper understanding of Agra's cultural heritage.</p>",
+    "itinerary": "<p>09:00 AM – Hotel pickup from Agra.</p><p>09:30 AM – Guided tour of Agra Fort.</p><p>11:30 AM – Visit Jahangir Palace and Diwan-i-Khas.</p><p>01:00 PM – Lunch break (optional).</p><p>02:30 PM – Visit Mehtab Bagh for panoramic Taj Mahal views.</p><p>04:00 PM – Explore local marble handicraft workshops.</p><p>05:30 PM – Drop back to your hotel.</p>",
+    "highlights": "UNESCO World Heritage Agra Fort\r\nScenic Mehtab Bagh\r\nExpert Local Guide\r\nTraditional Marble Inlay Workshop\r\nPrivate Air-Conditioned Vehicle\r\nExcellent Photography Spots",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate AC Vehicle\r\nProfessional Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water",
+    "exclusions": "Monument Entrance Tickets\r\nLunch\r\nPersonal Expenses\r\nTips & Gratuities\r\nCamera Fees",
+    "duration": "8 Hours",
+    "price": "2799.00",
+    "discount_price": "2299.00",
+    "hero_image": "tours/hero/20251025_100824.jpg",
+    "featured": true,
+    "display_order": 3,
+    "seo_title": "Agra Fort & Mehtab Bagh Tour | Heritage Tour in Agra",
+    "seo_description": "Explore Agra Fort, Mehtab Bagh and Mughal heritage with Trivoya Travels. Private guided tour with comfortable transport and expert local guides.",
+    "meta_keywords": "Agra Fort tour, Mehtab Bagh tour, Agra heritage tour, Mughal history, Agra sightseeing, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T15:56:34.520Z",
+    "updated_at": "2026-06-26T15:58:40.503Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 4,
+  "fields": {
+    "city": "agra",
+    "category": 3,
+    "name": "Fatehpur Sikri Day Tour",
+    "slug": "fatehpur-sikri-day-tour",
+    "short_description": "Visit the magnificent abandoned Mughal capital of Fatehpur Sikri and discover royal palaces, grand gateways, and fascinating history with an expert local guide.",
+    "description": "<p>Step back in time with a guided tour of Fatehpur Sikri, the magnificent former capital of the Mughal Empire built by Emperor Akbar in the 16th century. Recognized as a UNESCO World Heritage Site, this beautifully preserved city showcases stunning Mughal architecture, grand courtyards, royal palaces, and intricate stone carvings.</p><p>Walk through the impressive Buland Darwaza, explore the Jama Masjid, visit the Tomb of Salim Chishti, and admire the royal residence known as Panch Mahal. Your knowledgeable guide will share captivating stories about Emperor Akbar, his vision for the city, and why Fatehpur Sikri was eventually abandoned.</p><p>This full-day excursion offers an unforgettable glimpse into India's rich history and architectural heritage, making it an ideal experience for history enthusiasts, families, and photographers.</p>",
+    "itinerary": "<p>08:00 AM – Hotel pickup from Agra.</p><p>09:30 AM – Arrive at Fatehpur Sikri.</p><p>09:45 AM – Explore Buland Darwaza and Jama Masjid.</p><p>11:00 AM – Visit the Tomb of Salim Chishti.</p><p>12:00 PM – Explore Panch Mahal and Diwan-i-Khas.</p><p>01:30 PM – Lunch break (optional).</p><p>03:00 PM – Visit local handicraft markets.</p><p>05:00 PM – Return to Agra.</p><p>06:00 PM – Hotel drop-off.</p>",
+    "highlights": "UNESCO World Heritage Site\r\nBuland Darwaza\r\nJama Masjid\r\nPanch Mahal\r\nProfessional Local Guide\r\nPrivate AC Transportation",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate Air-Conditioned Vehicle\r\nProfessional Tour Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nMeals & Drinks\r\nPersonal Expenses\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "9 Hours",
+    "price": "3499.00",
+    "discount_price": "2999.00",
+    "hero_image": "tours/hero/pexels-worldwithprasha-37968645.jpg",
+    "featured": true,
+    "display_order": 0,
+    "seo_title": "Fatehpur Sikri Day Tour | UNESCO Heritage Tour from Agra",
+    "seo_description": "Book a guided Fatehpur Sikri Day Tour with Trivoya Travels and explore the magnificent Mughal capital, Buland Darwaza, Jama Masjid, and Panch Mahal with private transportation.",
+    "meta_keywords": "Fatehpur Sikri tour, Fatehpur Sikri day trip, Buland Darwaza, Agra sightseeing, Mughal architecture, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:05:30.296Z",
+    "updated_at": "2026-06-26T16:05:30.296Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 5,
+  "fields": {
+    "city": "agra",
+    "category": 2,
+    "name": "Agra Full Day Sightseeing Tour",
+    "slug": "agra-full-day-sightseeing-tour",
+    "short_description": "Discover the best of Agra in one unforgettable day with visits to the Taj Mahal, Agra Fort, Mehtab Bagh, and traditional handicraft workshops.",
+    "description": "<p>Experience the very best of Agra with this comprehensive full-day sightseeing tour. Perfect for first-time visitors, this journey covers the city's most iconic landmarks, rich Mughal history, and vibrant local culture.</p><p>Begin your day at the magnificent Taj Mahal, one of the Seven Wonders of the World and a symbol of eternal love. Continue to the impressive Agra Fort, where Mughal emperors once ruled one of the world's greatest empires. Enjoy breathtaking views of the Taj Mahal from Mehtab Bagh before exploring Agra's famous marble inlay workshops and local handicraft markets.</p><p>Led by an experienced local guide and accompanied by comfortable private transportation, this tour offers the perfect combination of history, architecture, culture, and authentic local experiences for couples, families, and solo travelers.</p>",
+    "itinerary": "<p>08:00 AM – Hotel pickup from Agra.</p><p>08:30 AM – Guided visit to the Taj Mahal.</p><p>10:30 AM – Explore Agra Fort.</p><p>12:30 PM – Lunch at a recommended local restaurant (optional).</p><p>02:00 PM – Visit Mehtab Bagh for panoramic Taj Mahal views.</p><p>03:30 PM – Explore a traditional marble inlay workshop.</p><p>04:30 PM – Visit local handicraft and souvenir markets.</p><p>05:30 PM – Hotel drop-off.</p>",
+    "highlights": "Visit Taj Mahal\r\nExplore Agra Fort\r\nMehtab Bagh Garden\r\nPrivate Local Guide\r\nMarble Inlay Workshop\r\nPrivate Air-Conditioned Vehicle\r\nLocal Shopping Experience",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate AC Vehicle\r\nProfessional English Speaking Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nMeals & Drinks\r\nPersonal Shopping\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "10 Hours",
+    "price": "4499.00",
+    "discount_price": "3899.00",
+    "hero_image": "tours/hero/IMG-20251007-WA0028.jpg",
+    "featured": true,
+    "display_order": 5,
+    "seo_title": "Agra Full Day Sightseeing Tour | Taj Mahal & Agra Fort Tour",
+    "seo_description": "Discover Agra's top attractions including the Taj Mahal, Agra Fort, Mehtab Bagh, and local handicraft markets with a full-day guided sightseeing tour by Trivoya Travels.",
+    "meta_keywords": "Agra sightseeing tour, Agra full day tour, Taj Mahal tour, Agra Fort, Mehtab Bagh, Agra attractions, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:10:30.316Z",
+    "updated_at": "2026-06-26T16:11:38.418Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 6,
+  "fields": {
+    "city": "delhi",
+    "category": 4,
+    "name": "Old & New Delhi Sightseeing Tour",
+    "slug": "old-new-delhi-sightseeing-tour",
+    "short_description": "Explore the perfect blend of Old and New Delhi with visits to historic monuments, bustling markets, grand government buildings, and cultural landmarks in one unforgettable day.",
+    "description": "<p>Discover the fascinating contrast between the historic charm of Old Delhi and the modern elegance of New Delhi on this full-day sightseeing experience. Begin your journey through the narrow streets of Old Delhi, where centuries-old monuments, colorful markets, and traditional culture create an unforgettable atmosphere.</p><p>Visit the magnificent Red Fort (outside view), Jama Masjid, and enjoy the vibrant surroundings of Chandni Chowk. Continue to Raj Ghat, the memorial of Mahatma Gandhi, before exploring the impressive architecture of New Delhi including India Gate, Rashtrapati Bhavan, Parliament House, Humayun's Tomb, Lotus Temple, and Qutub Minar.</p><p>Travel comfortably in a private air-conditioned vehicle accompanied by a knowledgeable local guide who will share fascinating stories about Delhi's rich history, culture, and heritage. This tour is perfect for travelers who want to experience the highlights of India's capital city in a single day.</p>",
+    "itinerary": "<p>08:00 AM – Hotel pickup from Delhi.</p><p>08:30 AM – Visit Jama Masjid.</p><p>09:30 AM – Rickshaw ride through Chandni Chowk.</p><p>10:30 AM – Drive past the Red Fort.</p><p>11:30 AM – Visit Raj Ghat.</p><p>01:00 PM – Lunch break (optional).</p><p>02:00 PM – India Gate &amp; Rashtrapati Bhavan.</p><p>03:00 PM – Humayun's Tomb.</p><p>04:00 PM – Lotus Temple.</p><p>05:00 PM – Qutub Minar.</p><p>06:30 PM – Hotel drop-off.</p>",
+    "highlights": "Old Delhi Rickshaw Ride\r\nJama Masjid\r\nRed Fort (Outside View)\r\nIndia Gate\r\nHumayun's Tomb\r\nLotus Temple\r\nQutub Minar\r\nPrivate Local Guide",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate AC Vehicle\r\nProfessional Tour Guide\r\nRickshaw Ride in Chandni Chowk\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nLunch & Drinks\r\nPersonal Expenses\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "9 Hours",
+    "price": "3999.00",
+    "discount_price": "3499.00",
+    "hero_image": "tours/hero/pexels-ranjeet-chauhan-485922-20083843.jpg",
+    "featured": true,
+    "display_order": 1,
+    "seo_title": "Old & New Delhi Sightseeing Tour | Full Day Delhi Tour",
+    "seo_description": "Explore Old Delhi and New Delhi in one day with Trivoya Travels. Visit India Gate, Jama Masjid, Qutub Minar, Lotus Temple, Humayun's Tomb, and more with expert local guides.",
+    "meta_keywords": "Delhi sightseeing tour, Old Delhi tour, New Delhi tour, India Gate, Qutub Minar, Jama Masjid, Delhi city tour, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:23:04.359Z",
+    "updated_at": "2026-06-26T16:23:04.360Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 7,
+  "fields": {
+    "city": "delhi",
+    "category": 4,
+    "name": "Akshardham & Spiritual Delhi Tour",
+    "slug": "akshardham-spiritual-delhi-tour",
+    "short_description": "Discover Delhi's spiritual side with visits to Akshardham Temple, Lotus Temple, ISKCON Temple, and Gurudwara Bangla Sahib on this peaceful guided sightseeing tour.",
+    "description": "<p>Experience the spiritual essence of India's capital on this carefully curated temple tour. Visit some of Delhi's most iconic places of worship, each representing different faiths and architectural styles.</p><p>Begin your journey at the magnificent Swaminarayan Akshardham Temple, famous for its breathtaking carvings and cultural exhibitions. Continue to the peaceful Lotus Temple, a symbol of unity and harmony that welcomes visitors from every religion.</p><p>The tour also includes visits to the vibrant ISKCON Temple and the sacred Gurudwara Bangla Sahib, where you can experience Sikh traditions and the famous community kitchen (Langar). Accompanied by a knowledgeable local guide and comfortable private transportation, this tour offers a perfect blend of spirituality, architecture, and culture.</p>",
+    "itinerary": "<p>09:00 AM – Hotel pickup from Delhi.</p><p>09:45 AM – Visit Akshardham Temple.</p><p>12:00 PM – Explore Lotus Temple.</p><p>01:30 PM – Lunch break (optional).</p><p>02:30 PM – Visit ISKCON Temple.</p><p>04:00 PM – Visit Gurudwara Bangla Sahib.</p><p>05:30 PM – Evening drive through Connaught Place.</p><p>06:30 PM – Hotel drop-off.</p>",
+    "highlights": "Akshardham Temple\r\nLotus Temple\r\nISKCON Temple\r\nBangla Sahib Gurudwara\r\nPrivate AC Vehicle\r\nProfessional Local Guide\r\nPeaceful Cultural Experience",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate Air-Conditioned Vehicle\r\nProfessional Tour Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Meals & Drinks\r\nPersonal Expenses\r\nTemple Donations\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "8 Hours",
+    "price": "3799.00",
+    "discount_price": "3299.00",
+    "hero_image": "tours/hero/pexels-daredevil-4533747.jpg",
+    "featured": true,
+    "display_order": 2,
+    "seo_title": "Akshardham & Spiritual Delhi Tour | Delhi Temple Tour",
+    "seo_description": "Visit Akshardham Temple, Lotus Temple, ISKCON Temple, and Gurudwara Bangla Sahib with Trivoya Travels on a comfortable full-day guided Delhi spiritual tour.",
+    "meta_keywords": "Akshardham tour, Lotus Temple tour, Delhi temple tour, spiritual Delhi, Bangla Sahib, ISKCON Delhi, Delhi sightseeing, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:31:05.079Z",
+    "updated_at": "2026-06-26T16:31:52.573Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 8,
+  "fields": {
+    "city": "delhi",
+    "category": 4,
+    "name": "Humayun's Tomb & Qutub Minar Heritage Tour",
+    "slug": "humayuns-tomb-qutub-minar-heritage-tour",
+    "short_description": "Explore two of Delhi's most magnificent UNESCO World Heritage Sites with a guided heritage tour of Humayun's Tomb, Qutub Minar, and the historic Mehrauli Archaeological Park.",
+    "description": "<p>Discover the architectural wonders of Delhi on this heritage tour featuring two of the city's most iconic UNESCO World Heritage Sites. Begin your journey at the magnificent Humayun's Tomb, the inspiration behind the Taj Mahal and one of the finest examples of Mughal architecture in India.</p><p>Continue to the towering Qutub Minar, the tallest brick minaret in the world, where you'll explore centuries of history, intricate carvings, and remarkable Indo-Islamic architecture. Walk through the Qutub Complex to see the famous Iron Pillar and learn about the fascinating legends surrounding it.</p><p>The experience also includes a visit to the beautiful Mehrauli Archaeological Park, home to centuries-old monuments, gardens, and hidden historical treasures. Throughout the tour, your expert local guide will share captivating stories about Delhi's rich heritage, making this an unforgettable experience for history lovers, photographers, and first-time visitors.</p>",
+    "itinerary": "<p>09:00 AM – Hotel pickup from Delhi.</p><p>09:45 AM – Guided tour of Humayun's Tomb.</p><p>11:30 AM – Explore Isa Khan's Tomb and surrounding gardens.</p><p>01:00 PM – Lunch break (optional).</p><p>02:30 PM – Visit Qutub Minar Complex.</p><p>03:30 PM – Explore the Iron Pillar and Alai Darwaza.</p><p>04:30 PM – Walk through Mehrauli Archaeological Park.</p><p>06:00 PM – Hotel drop-off.</p>",
+    "highlights": "Humayun's Tomb\r\nQutub Minar\r\nIron Pillar\r\nMehrauli Archaeological Park\r\nUNESCO World Heritage Sites\r\nProfessional Local Guide\r\nPrivate Air-Conditioned Vehicle",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate Air-Conditioned Vehicle\r\nProfessional English-Speaking Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nMeals & Drinks\r\nPersonal Expenses\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "8 Hours",
+    "price": "3899.00",
+    "discount_price": "3399.00",
+    "hero_image": "tours/hero/IMG20260213093954.jpg",
+    "featured": true,
+    "display_order": 4,
+    "seo_title": "Humayun's Tomb & Qutub Minar Heritage Tour | Delhi UNESCO Tour",
+    "seo_description": "Explore Humayun's Tomb, Qutub Minar, the Iron Pillar, and Mehrauli Archaeological Park with Trivoya Travels on a full-day guided heritage tour of Delhi.",
+    "meta_keywords": "Humayun's Tomb tour, Qutub Minar tour, Delhi heritage tour, UNESCO Delhi, Mehrauli Archaeological Park, Delhi sightseeing, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:37:51.382Z",
+    "updated_at": "2026-06-26T16:37:51.382Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 9,
+  "fields": {
+    "city": "jaipur",
+    "category": 5,
+    "name": "Jaipur Full Day Sightseeing Tour",
+    "slug": "jaipur-full-day-sightseeing-tour",
+    "short_description": "Explore Jaipur's magnificent forts, royal palaces, vibrant bazaars, and UNESCO World Heritage Sites on a full-day guided sightseeing experience.",
+    "description": "<p>Experience the royal charm of Jaipur, famously known as the Pink City, on this comprehensive full-day sightseeing tour. Discover the city's magnificent forts, elegant palaces, colorful markets, and rich Rajasthani heritage while traveling comfortably with an experienced local guide.</p><p>Begin your journey at the majestic Amber Fort, one of Rajasthan's most famous hill forts. Continue to Jal Mahal, the beautiful Water Palace situated in the middle of Man Sagar Lake, before exploring the iconic City Palace, the astronomical marvel of Jantar Mantar, and the world-famous Hawa Mahal.</p><p>Stroll through Jaipur's vibrant local bazaars where you can discover traditional handicrafts, gemstones, textiles, and authentic Rajasthani souvenirs. This tour perfectly combines history, architecture, culture, and local experiences, making it ideal for families, couples, photographers, and first-time visitors.</p>",
+    "itinerary": "<p>08:00 AM – Hotel pickup from Jaipur.</p><p>08:45 AM – Visit Amber Fort.</p><p>11:00 AM – Stop at Jal Mahal for photography.</p><p>12:00 PM – Explore City Palace.</p><p>01:30 PM – Lunch break (optional).</p><p>02:30 PM – Visit Jantar Mantar.</p><p>03:30 PM – Photo stop at Hawa Mahal.</p><p>04:30 PM – Shopping at Johari Bazaar &amp; Bapu Bazaar.</p><p>06:00 PM – Hotel drop-off.</p>",
+    "highlights": "Amber Fort\r\nCity Palace\r\nJantar Mantar\r\nHawa Mahal\r\nJal Mahal\r\nJohari Bazaar\r\nProfessional Local Guide\r\nPrivate AC Vehicle",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate Air-Conditioned Vehicle\r\nProfessional English-Speaking Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nMeals & Drinks\r\nPersonal Expenses\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "9 Hours",
+    "price": "4299.00",
+    "discount_price": "3799.00",
+    "hero_image": "tours/hero/20200213_125154_1.jpg",
+    "featured": true,
+    "display_order": 1,
+    "seo_title": "Jaipur Full Day Sightseeing Tour | Pink City Heritage Tour",
+    "seo_description": "Explore Amber Fort, City Palace, Hawa Mahal, Jal Mahal, Jantar Mantar, and Jaipur's famous markets with Trivoya Travels on a full-day guided sightseeing tour.",
+    "meta_keywords": "Jaipur sightseeing tour, Pink City tour, Amber Fort, Hawa Mahal, City Palace Jaipur, Rajasthan tour, Jaipur travel, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:43:45.973Z",
+    "updated_at": "2026-06-26T16:43:45.973Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 10,
+  "fields": {
+    "city": "jaipur",
+    "category": 5,
+    "name": "Amber Fort & Nahargarh Fort Tour",
+    "slug": "amber-fort-nahargarh-fort-tour",
+    "short_description": "Discover Jaipur's magnificent hill forts with a guided tour of Amber Fort and Nahargarh Fort while enjoying breathtaking panoramic views of the Pink City.",
+    "description": "<p>Experience the grandeur of Jaipur's royal heritage with a visit to two of Rajasthan's most iconic hill forts. Begin your journey at the magnificent Amber Fort, a UNESCO World Heritage Site renowned for its impressive architecture, grand courtyards, mirror palace (Sheesh Mahal), and stunning views of the Aravalli Hills.</p><p>Continue to Nahargarh Fort, perched high above Jaipur, offering spectacular panoramic views of the Pink City. Explore the fort's beautifully preserved halls, royal chambers, and scenic viewpoints while learning about the fascinating history of the Rajput rulers.</p><p>This tour combines history, architecture, photography, and breathtaking landscapes, making it an unforgettable experience for couples, families, photographers, and history enthusiasts.</p>",
+    "itinerary": "<p>08:30 AM – Hotel pickup from Jaipur.</p><p>09:15 AM – Guided tour of Amber Fort.</p><p>11:30 AM – Explore Sheesh Mahal and royal courtyards.</p><p>01:00 PM – Lunch break (optional).</p><p>02:30 PM – Drive to Nahargarh Fort.</p><p>03:00 PM – Explore Nahargarh Fort.</p><p>04:30 PM – Enjoy panoramic city views and photography.</p><p>06:00 PM – Hotel drop-off.</p>",
+    "highlights": "Amber Fort\r\nSheesh Mahal\r\nNahargarh Fort\r\nPanoramic Jaipur Views\r\nProfessional Local Guide\r\nPrivate Air-Conditioned Vehicle\r\nPhotography Opportunities",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate Air-Conditioned Vehicle\r\nProfessional English-Speaking Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nMeals & Drinks\r\nPersonal Expenses\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "8 Hours",
+    "price": "3999.00",
+    "discount_price": "3499.00",
+    "hero_image": "tours/hero/contact-hero.png",
+    "featured": true,
+    "display_order": 2,
+    "seo_title": "Amber Fort & Nahargarh Fort Tour | Jaipur Heritage Experience",
+    "seo_description": "Visit the magnificent Amber Fort and Nahargarh Fort with Trivoya Travels. Enjoy a guided heritage tour, panoramic city views, and comfortable private transportation.",
+    "meta_keywords": "Amber Fort tour, Nahargarh Fort tour, Jaipur heritage tour, Sheesh Mahal, Jaipur sightseeing, Rajasthan forts, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:51:36.228Z",
+    "updated_at": "2026-06-26T16:52:32.212Z"
+  }
+},
+{
+  "model": "tours.tour",
+  "pk": 11,
+  "fields": {
+    "city": "jaipur",
+    "category": 5,
+    "name": "City Palace & Hawa Mahal Heritage Tour",
+    "slug": "city-palace-hawa-mahal-heritage-tour",
+    "short_description": "Explore Jaipur's royal heritage with a guided tour of the magnificent City Palace, the iconic Hawa Mahal, Jantar Mantar, and the vibrant old city markets.",
+    "description": "<p>Step into the royal history of Jaipur with this immersive heritage tour covering the city's most iconic landmarks. Begin your journey at the magnificent City Palace, the residence of Jaipur's royal family, where beautiful courtyards, museums, and royal collections showcase Rajasthan's glorious past.</p><p>Continue to the world-famous Hawa Mahal, also known as the Palace of Winds, admired for its unique honeycomb façade featuring 953 intricately designed windows. Visit the UNESCO World Heritage Site of Jantar Mantar, an extraordinary astronomical observatory built by Maharaja Sawai Jai Singh II.</p><p>Complete your experience by exploring Jaipur's bustling old city markets, where colorful handicrafts, gemstones, textiles, blue pottery, and traditional Rajasthani souvenirs create an unforgettable shopping and cultural experience. This tour is perfect for travelers seeking history, architecture, and authentic local culture.</p>",
+    "itinerary": "<p>09:00 AM – Hotel pickup from Jaipur.</p><p>09:30 AM – Guided tour of City Palace.</p><p>11:30 AM – Visit Jantar Mantar.</p><p>12:30 PM – Photo stop at Hawa Mahal.</p><p>01:30 PM – Lunch break (optional).</p><p>03:00 PM – Explore Johari Bazaar.</p><p>04:00 PM – Visit Bapu Bazaar.</p><p>05:30 PM – Hotel drop-off.</p>",
+    "highlights": "City Palace\r\nHawa Mahal\r\nJantar Mantar\r\nJohari Bazaar\r\nBapu Bazaar\r\nProfessional Local Guide\r\nPrivate Air-Conditioned Vehicle",
+    "inclusions": "Hotel Pickup & Drop\r\nPrivate Air-Conditioned Vehicle\r\nProfessional English-Speaking Guide\r\nParking Charges\r\nFuel Charges\r\nAll Toll Taxes\r\nMineral Water Bottles",
+    "exclusions": "Monument Entrance Tickets\r\nMeals & Drinks\r\nPersonal Shopping\r\nTips & Gratuities\r\nTravel Insurance",
+    "duration": "8 Hours",
+    "price": "3799.00",
+    "discount_price": "3299.00",
+    "hero_image": "tours/hero/pexels-vijesh-vijayan-891485037-19867647.jpg",
+    "featured": true,
+    "display_order": 3,
+    "seo_title": "City Palace & Hawa Mahal Heritage Tour | Jaipur Royal Experience",
+    "seo_description": "Visit Jaipur's City Palace, Hawa Mahal, Jantar Mantar, and famous bazaars with Trivoya Travels on a guided heritage tour of the Pink City.",
+    "meta_keywords": "City Palace Jaipur, Hawa Mahal tour, Jaipur heritage tour, Jantar Mantar Jaipur, Johari Bazaar, Pink City sightseeing, Trivoya Travels",
+    "is_active": true,
+    "created_at": "2026-06-26T16:58:06.872Z",
+    "updated_at": "2026-06-26T16:59:26.878Z"
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 1,
+  "fields": {
+    "tour": 1,
+    "image": "tours/gallery/pexels-sanjiv-kumar-singh-535147289-38068199_1.jpg",
+    "caption": "",
+    "display_order": 2
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 2,
+  "fields": {
+    "tour": 1,
+    "image": "tours/gallery/pexels-anuradha-gupta-2107961-4002705.jpg",
+    "caption": "",
+    "display_order": 1
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 3,
+  "fields": {
+    "tour": 1,
+    "image": "tours/gallery/agra-fort.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 4,
+  "fields": {
+    "tour": 2,
+    "image": "tours/gallery/IMG-20260201-WA0202.jpg",
+    "caption": "",
+    "display_order": 2
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 5,
+  "fields": {
+    "tour": 2,
+    "image": "tours/gallery/IMG-20260209-WA0009.jpg",
+    "caption": "",
+    "display_order": 1
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 6,
+  "fields": {
+    "tour": 2,
+    "image": "tours/gallery/20250529_172124.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 7,
+  "fields": {
+    "tour": 2,
+    "image": "tours/gallery/IMG-20250812-WA0029.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 8,
+  "fields": {
+    "tour": 3,
+    "image": "tours/gallery/IMG_20230916_152036.jpg",
+    "caption": "",
+    "display_order": 1
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 9,
+  "fields": {
+    "tour": 3,
+    "image": "tours/gallery/1280px-A_window_view_of_Taj_Mahal_from_Agra_Fort.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 10,
+  "fields": {
+    "tour": 3,
+    "image": "tours/gallery/20251025_100824.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 11,
+  "fields": {
+    "tour": 3,
+    "image": "tours/gallery/pexels-sanjiv-kumar-singh-535147289-38068199.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 12,
+  "fields": {
+    "tour": 4,
+    "image": "tours/gallery/IMG-20250712-WA0018.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 13,
+  "fields": {
+    "tour": 4,
+    "image": "tours/gallery/IMG-20250612-WA0069.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 14,
+  "fields": {
+    "tour": 5,
+    "image": "tours/gallery/IMG_20250313_114305.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 15,
+  "fields": {
+    "tour": 5,
+    "image": "tours/gallery/IMG-20260201-WA0202_xi9mXI4.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 16,
+  "fields": {
+    "tour": 5,
+    "image": "tours/gallery/Taj_Mahal_Exterior_with_a_minaret.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 17,
+  "fields": {
+    "tour": 5,
+    "image": "tours/gallery/Flowers_on_a_wall_Unsplash.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 18,
+  "fields": {
+    "tour": 6,
+    "image": "tours/gallery/20200309_192618.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 19,
+  "fields": {
+    "tour": 6,
+    "image": "tours/gallery/IMG20260213083442.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 20,
+  "fields": {
+    "tour": 6,
+    "image": "tours/gallery/pexels-shantanu09-11974156.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 21,
+  "fields": {
+    "tour": 6,
+    "image": "tours/gallery/pexels-ehaan-deva-2149036462-33928947.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 22,
+  "fields": {
+    "tour": 7,
+    "image": "tours/gallery/pexels-daredevil-4533747.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 23,
+  "fields": {
+    "tour": 7,
+    "image": "tours/gallery/pexels-ehaan-deva-2149036462-33928947_S7qOOPT.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 24,
+  "fields": {
+    "tour": 7,
+    "image": "tours/gallery/pexels-sandhu-jassi-2149181128-35745407.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 25,
+  "fields": {
+    "tour": 7,
+    "image": "tours/gallery/pexels-vishalcreation-30233769.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 26,
+  "fields": {
+    "tour": 8,
+    "image": "tours/gallery/IMG20260213083214.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 27,
+  "fields": {
+    "tour": 8,
+    "image": "tours/gallery/IMG20260213092926.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 28,
+  "fields": {
+    "tour": 8,
+    "image": "tours/gallery/IMG20260213083442_aFh6aOQ.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 29,
+  "fields": {
+    "tour": 8,
+    "image": "tours/gallery/IMG20260213082835.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 30,
+  "fields": {
+    "tour": 9,
+    "image": "tours/gallery/20200213_122352.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 31,
+  "fields": {
+    "tour": 9,
+    "image": "tours/gallery/IMG-20260213-WA0006.jpeg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 32,
+  "fields": {
+    "tour": 9,
+    "image": "tours/gallery/pexels-absoluteabhi-31760586.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 33,
+  "fields": {
+    "tour": 10,
+    "image": "tours/gallery/pexels-altaf-mughal-2152120831-32155068.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 34,
+  "fields": {
+    "tour": 10,
+    "image": "tours/gallery/20200213_125815.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 35,
+  "fields": {
+    "tour": 10,
+    "image": "tours/gallery/20200213_125658.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 36,
+  "fields": {
+    "tour": 11,
+    "image": "tours/gallery/pexels-vijesh-vijayan-891485037-19867647.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.tourimage",
+  "pk": 37,
+  "fields": {
+    "tour": 11,
+    "image": "tours/gallery/pexels-exploredestination2-27970035.jpg",
+    "caption": "",
+    "display_order": 0
+  }
+},
+{
+  "model": "tours.blogpost",
+  "pk": 1,
+  "fields": {
+    "title": "Best Time to Visit the Taj Mahal: A Complete Seasonal Guide",
+    "slug": "best-time-to-visit-the-taj-mahal-a-complete-season",
+    "content": "<h2>Introduction</h2><p>The Taj Mahal is one of the world's most iconic monuments and a UNESCO World Heritage Site that attracts millions of visitors every year. While it is breathtaking throughout the year, choosing the right season and time of day can make your visit even more memorable. Whether you are traveling for photography, history, or simply to admire its beauty, planning your visit wisely will help you enjoy the experience to the fullest.</p><h2>October to March – The Best Time to Visit</h2><p>The winter months from October to March are considered the ideal time to visit the Taj Mahal. The weather is pleasant, the skies are generally clear, and walking around the monument is much more comfortable. Sunrise during winter offers spectacular views as the soft golden light reflects beautifully on the white marble. Since this is the peak tourist season, booking tickets in advance is highly recommended.</p><h2>April to June – Summer Season</h2><p>Summer in Agra can be extremely hot, with temperatures often crossing 40°C. Visitors planning a trip during this season should arrive early in the morning to avoid the intense afternoon heat. Carry plenty of water, wear light cotton clothing, and use sunscreen for a comfortable visit.</p><h2>July to September – Monsoon Season</h2><p>During the monsoon season, occasional rain showers transform the gardens around the Taj Mahal into lush green landscapes. The cloudy skies create dramatic backgrounds, making this season especially attractive for photographers. Tourist crowds are generally smaller, allowing visitors to enjoy a more peaceful experience.</p><h2>Sunrise or Sunset?</h2><p>Sunrise is widely regarded as the best time to visit the Taj Mahal. The peaceful surroundings, cooler temperatures, and soft morning light create an unforgettable atmosphere.</p><p>Sunset is another excellent choice, offering warm golden hues across the marble monument and a relaxed environment as the day comes to an end.</p><h2>Travel Tips</h2><ul><li data-list-item-id=\"e300438851da8b20261bf82c0c7c9ccc4\">Book your tickets online before your visit.</li><li data-list-item-id=\"eae92c126dad7f5c6e9e8f0940008699d\">Reach the entrance at least 30 minutes early.</li><li data-list-item-id=\"e397aa9865e3a71d4bca201fb77f958bc\">Carry a valid photo ID.</li><li data-list-item-id=\"e81d30689c74e6632766456edd33fb8fe\">Wear comfortable walking shoes.</li><li data-list-item-id=\"e2bd0da350ac5e95d4daf3ee0b4626926\">Hire a certified local guide to better understand the history and architecture of the monument.</li><li data-list-item-id=\"e6a6ea0aa7969844840e4c1606c7d7cca\">Carry drinking water and sunscreen, especially during the summer months.</li></ul><h2>Conclusion</h2><p>The Taj Mahal is beautiful in every season, but visiting at the right time can make your journey even more memorable. Whether you witness its beauty at sunrise during winter or admire it beneath dramatic monsoon skies, the Taj Mahal promises an unforgettable experience for every traveler.</p>",
+    "featured_image": "blogs/20251213_124959.jpg",
+    "created_at": "2026-06-26T17:01:38.636Z",
+    "is_published": true
+  }
+},
+{
+  "model": "tours.blogpost",
+  "pk": 2,
+  "fields": {
+    "title": "Top 10 Places to Visit in Agra Beyond the Taj Mahal",
+    "slug": "top-10-places-to-visit-in-agra-beyond-the-taj-maha",
+    "content": "<h2>Introduction</h2><p>Agra is world-famous for the magnificent Taj Mahal, but the city has much more to offer than just one monument. Rich Mughal architecture, beautiful gardens, vibrant markets, and centuries of history make Agra an ideal destination for travelers looking to experience India's cultural heritage. Here are ten places you should not miss during your visit.</p><h2>1. Agra Fort</h2><figure class=\"image\"><img style=\"aspect-ratio:5718/3812;\" src=\"/media/agra.jpg\" width=\"5718\" height=\"3812\"></figure><p>A UNESCO World Heritage Site, Agra Fort served as the main residence of the Mughal emperors. Explore magnificent palaces, grand courtyards, and stunning views of the Taj Mahal from its walls.</p><h2>2. Mehtab Bagh</h2><figure class=\"image\"><img style=\"aspect-ratio:2824/1893;\" src=\"/media/pexels-sanjiv-kumar-singh-535147289-38068199%20(1).jpg\" width=\"2824\" height=\"1893\"></figure><p>Located across the Yamuna River, Mehtab Bagh offers one of the most beautiful sunset views of the Taj Mahal. It is perfect for photography and peaceful evening walks.</p><h2>3. Itmad-ud-Daulah (Baby Taj)</h2><figure class=\"image\"><img style=\"aspect-ratio:5997/3998;\" src=\"/media/pexels-axp-photography-500641970-16386146.jpg\" width=\"5997\" height=\"3998\"></figure><p>Often called the \"Baby Taj,\" this elegant marble mausoleum is considered the inspiration behind the Taj Mahal's design.</p><h2>4. Fatehpur Sikri</h2><figure class=\"image\"><img style=\"aspect-ratio:1600/1200;\" src=\"/media/IMG-20250712-WA0018.jpg\" width=\"1600\" height=\"1200\"></figure><p>Located about 40 km from Agra, this historic city was once the capital of Emperor Akbar. The impressive Buland Darwaza and Jama Masjid make it a must-visit destination.</p><h2>5. Akbar's Tomb, Sikandra</h2><figure class=\"image\"><img style=\"aspect-ratio:5930/3953;\" src=\"/media/pexels-axp-photography-500641970-19149612.jpg\" width=\"5930\" height=\"3953\"></figure><p>The final resting place of Emperor Akbar is surrounded by beautiful Mughal gardens and remarkable architecture.</p><h2>6. Kinari Bazaar</h2><figure class=\"image\"><img style=\"aspect-ratio:4000/6000;\" src=\"/media/pexels-neha-parganihaa-2152600083-36406040.jpg\" width=\"4000\" height=\"6000\"></figure><p>Experience authentic Agra shopping with leather products, handicrafts, marble souvenirs, spices, and traditional sweets.</p><h2>7. Chini Ka Rauza</h2><p>A lesser-known Mughal monument famous for its colorful Persian glazed tile work.</p><h2>8. Jama Masjid</h2><p>One of India's largest mosques, located close to Agra Fort and ideal for history enthusiasts.</p><h2>9. Wildlife SOS Bear Rescue Centre</h2><figure class=\"image\"><img style=\"aspect-ratio:6000/4000;\" src=\"/media/pexels-oliver-morgan-media-400577173-18453575.jpg\" width=\"6000\" height=\"4000\"></figure><p>A unique conservation center where visitors can learn about rescued sloth bears and wildlife protection efforts.</p><h2>10. Taj Nature Walk</h2><p>A peaceful walking trail offering beautiful viewpoints of the Taj Mahal surrounded by lush greenery.</p><h2>Conclusion</h2><p>While the Taj Mahal remains Agra's greatest attraction, exploring these destinations provides a deeper understanding of the city's rich history, architecture, and culture.</p>",
+    "featured_image": "blogs/agra-fort.jpg",
+    "created_at": "2026-06-27T14:07:39.291Z",
+    "is_published": true
+  }
+},
+{
+  "model": "tours.blogpost",
+  "pk": 3,
+  "fields": {
+    "title": "Golden Triangle Tour: Why It Is India's Most Popular Travel Circui",
+    "slug": "golden-triangle-tour",
+    "content": "<h2>Introduction</h2><p>The Golden Triangle is India's most famous tourist circuit, connecting Delhi, Agra, and Jaipur. It offers the perfect introduction to India's history, culture, architecture, and cuisine in just a few days.</p><h2>Delhi</h2><figure class=\"image\"><img style=\"aspect-ratio:4899/3265;\" src=\"/media/pexels-vijesh-vijayan-891485037-19867576.jpg\" width=\"4899\" height=\"3265\"></figure><p>Explore the nation's capital with visits to India Gate, Qutub Minar, Humayun's Tomb, Lotus Temple, and bustling Chandni Chowk.</p><h2>Agra</h2><figure class=\"image\"><img style=\"aspect-ratio:3901/2926;\" src=\"/media/hero_about.jpg\" width=\"3901\" height=\"2926\"></figure><p>Witness the timeless beauty of the Taj Mahal, explore Agra Fort, and enjoy spectacular sunset views from Mehtab Bagh.</p><h2>Jaipur</h2><figure class=\"image\"><img style=\"aspect-ratio:4000/3000;\" src=\"/media/20200213_122200.jpg\" width=\"4000\" height=\"3000\"></figure><p>Known as the Pink City, Jaipur offers magnificent attractions including Amber Fort, City Palace, Hawa Mahal, Jal Mahal, and vibrant local bazaars.</p><h2>Best Duration</h2><p>A 5 to 7-day itinerary allows travelers to comfortably explore all three cities without rushing.</p><h2>Travel Tips</h2><ul><li data-list-item-id=\"ee610ccee17b6d7471c134d7647bc07d9\">Start your tour from Delhi for easier flight connectivity.</li><li data-list-item-id=\"e86c34b00e336404dbff7afc217814996\">Book monument tickets online.</li><li data-list-item-id=\"eb8cfaf416f82b85862d8389881b9d283\">Carry comfortable walking shoes.</li><li data-list-item-id=\"efcf084bb5a409a9df7e3b7552d759fad\">Hire certified local guides for historical insights.</li><li data-list-item-id=\"e3b9bdc113fb995a4d91c30c056d9326e\">Visit monuments early in the morning to avoid crowds.</li></ul><h2>Conclusion</h2><p>Whether you are visiting India for the first time or returning to discover more, the Golden Triangle Tour offers the perfect blend of history, culture, and unforgettable experiences.</p>",
+    "featured_image": "blogs/20200213_125658.jpg",
+    "created_at": "2026-06-27T14:10:53.825Z",
+    "is_published": true
+  }
+}
+]

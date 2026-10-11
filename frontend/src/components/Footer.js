@@ -187,10 +187,10 @@ export default function Footer() {
               <FaEnvelope className="text-orange-500 mt-1" />
 
               <a
-                 href="mailto:trivoyatravelss@gmail.com"
+                 href="mailto:info@trivoyatravels.com"
                  className="hover:text-orange-400 transition"
               >
-                 trivoyatravelss@gmail.com
+                 info@trivoyatravels.com
               </a>
 
             </div>
